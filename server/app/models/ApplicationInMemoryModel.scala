@@ -1,19 +1,22 @@
 package models
 
-import collection.mutable
+//import collection.concurrent.Map
+import collection.mutable.Map
 import java.time.format.DateTimeFormatter
 import java.time.LocalDateTime
 
 object ApplicationInMemoryModel {
 
-    private val users = mutable.Map[String, String]("mlewis" -> "prof", "web" -> "apps", "user" -> "pass")
-    
-    private val tasks = mutable.Map[String, Seq[String]]("user" -> List("A", "B", "C"), "web" -> List("app1", "app2"), "mlewis" -> List("Code", "Space"))
-
     case class Message(from:String, body:String, timestamp:String)
-    
-    private val messages = mutable.Map[String, Seq[Message]]("web" -> List(Message("mlewis", "Ok google.", "2002-09-04 06:29")), 
+
+    private val users = Map[String, String]("mlewis" -> "prof", "web" -> "apps", "user" -> "pass")
+    //private val users1 = Map[String, String]("mlewis" -> "prof", "web" -> "apps", "user" -> "pass")
+    private val tasks = Map[String, Seq[String]]("user" -> List("A", "B", "C"), "web" -> List("app1", "app2"), "mlewis" -> List("Code", "Space"))
+    private val messages = Map[String, Seq[Message]]("web" -> List(Message("mlewis", "Ok google.", "2002-09-04 06:29")), 
     "public" -> List(Message("mlewis", "lorem ipsum", "2002-09-04 06:38")))
+
+    //private val messages1 = concurrent.ConcurrentMap[String, Seq[Message]]("web" -> List(Message("mlewis", "Ok google.", "2002-09-04 06:29")), 
+    //"public" -> List(Message("mlewis", "lorem ipsum", "2002-09-04 06:38")))
 
     def validateUser(username: String, password:String): Boolean = {
         users.get(username).map(_ == password).getOrElse(false)
@@ -22,8 +25,10 @@ object ApplicationInMemoryModel {
     def createUser(username:String, password:String): Boolean = {
         if (users.contains(username)) false
         else {
+            synchronized {
             users(username) = password
             true
+            }
         }
     }
 
@@ -45,11 +50,13 @@ object ApplicationInMemoryModel {
 
     def listUsers() = users.keySet.toList
 
-    def sendMessage(username:String, target:String, message:String) {
+    def sendMessage(username:String, target:String, message:String) = {
         val datetime = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm").format(LocalDateTime.now)
-        if (target == "all") {
-            messages("public") = Message(username, message, datetime) +: messages.get("public").getOrElse(Nil)
-        } else messages(target) = Message(username, message, datetime) +: messages.get(target).getOrElse(Nil) 
+        synchronized {
+            if (target == "all") {
+                messages("public") = Message(username, message, datetime) +: messages.get("public").getOrElse(Nil)
+            } else messages(target) = Message(username, message, datetime) +: messages.get(target).getOrElse(Nil) 
+        }
     }
 
     def getMessages(username:String):Seq[Message] = messages.get(username).getOrElse(Nil)
@@ -57,8 +64,10 @@ object ApplicationInMemoryModel {
     def removeMessage(username:String, index:Int): Boolean = {
         if (index < 0 || messages.get(username).isEmpty || index >= messages(username).length) false
         else  {
-            messages(username) = messages(username).patch(index, Nil, 1)
-            true 
+            synchronized {
+                messages(username) = messages(username).patch(index, Nil, 1)
+                true 
+            }
         }
     }
 

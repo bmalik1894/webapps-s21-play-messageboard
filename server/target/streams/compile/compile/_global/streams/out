@@ -1,14 +1,24 @@
-[0m[[0m[33mwarn[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/models/ApplicationInMemoryModel.scala:48:69: procedure syntax is deprecated: instead, add `: Unit =` to explicitly declare `sendMessage`'s return type[0m
-[0m[[0m[33mwarn[0m] [0m[0m    def sendMessage(username:String, target:String, message:String) {[0m
-[0m[[0m[33mwarn[0m] [0m[0m                                                                    ^[0m
-[0m[[0m[33mwarn[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/controllers/Application.scala:46:19: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method bindFromRequest,[0m
-[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
-[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
-[0m[[0m[33mwarn[0m] [0m[0m        loginForm.bindFromRequest.fold([0m
-[0m[[0m[33mwarn[0m] [0m[0m                  ^[0m
-[0m[[0m[33mwarn[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/controllers/Application.scala:70:15: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method bindFromRequest,[0m
-[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
-[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
-[0m[[0m[33mwarn[0m] [0m[0m    loginForm.bindFromRequest.fold([0m
-[0m[[0m[33mwarn[0m] [0m[0m              ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mthree warnings found[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/models/ApplicationInMemoryModel.scala:28:19: value addOne is not a member of scala.collection.immutable.Map[String,String][0m
+[0m[[0m[31merror[0m] [0m[0m            users.addOne(username, password)[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/models/ApplicationInMemoryModel.scala:38:9: value update is not a member of scala.collection.immutable.Map[String,Seq[String]][0m
+[0m[[0m[31merror[0m] [0m[0mdid you mean updated?[0m
+[0m[[0m[31merror[0m] [0m[0m        tasks(username) = task +: tasks.get(username).getOrElse(Nil)[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/models/ApplicationInMemoryModel.scala:44:13: value update is not a member of scala.collection.immutable.Map[String,Seq[String]][0m
+[0m[[0m[31merror[0m] [0m[0mdid you mean updated?[0m
+[0m[[0m[31merror[0m] [0m[0m            tasks(username) = tasks(username).patch(index, Nil, 1)[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/models/ApplicationInMemoryModel.scala:54:13: value update is not a member of scala.collection.immutable.Map[String,Seq[models.ApplicationInMemoryModel.Message]][0m
+[0m[[0m[31merror[0m] [0m[0mdid you mean updated?[0m
+[0m[[0m[31merror[0m] [0m[0m            messages("public") = Message(username, message, datetime) +: messages.get("public").getOrElse(Nil)[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/models/ApplicationInMemoryModel.scala:55:16: value update is not a member of scala.collection.immutable.Map[String,Seq[models.ApplicationInMemoryModel.Message]][0m
+[0m[[0m[31merror[0m] [0m[0mdid you mean updated?[0m
+[0m[[0m[31merror[0m] [0m[0m        } else messages(target) = Message(username, message, datetime) +: messages.get(target).getOrElse(Nil) [0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/models/ApplicationInMemoryModel.scala:63:13: value update is not a member of scala.collection.immutable.Map[String,Seq[models.ApplicationInMemoryModel.Message]][0m
+[0m[[0m[31merror[0m] [0m[0mdid you mean updated?[0m
+[0m[[0m[31merror[0m] [0m[0m            messages(username) = messages(username).patch(index, Nil, 1)[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m6 errors found[0m
