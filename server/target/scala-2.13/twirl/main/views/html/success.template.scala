@@ -29,52 +29,34 @@ Seq[Any](format.raw/*2.1*/("""
 
 <html>
   <head>
-    <title>Success</title>
   </head>
   <body style="background-image: url('../../public/images/bg.png'); background-color:rgba(161, 110, 209, .7)">
 	
-	<!--<ul>
-		"""),_display_(/*13.4*/for((task, i) <- tasks.zipWithIndex) yield /*13.40*/ {_display_(Seq[Any](format.raw/*13.42*/("""
-			"""),format.raw/*14.4*/("""<li>"""),_display_(/*14.9*/task),format.raw/*14.13*/("""</li>
-			<form method="post" action=""""),_display_(/*15.33*/routes/*15.39*/.Application.deleteTask()),format.raw/*15.64*/("""">
-				"""),_display_(/*16.6*/helper/*16.12*/.CSRF.formField),format.raw/*16.27*/("""
-				"""),format.raw/*17.5*/("""<input type="hidden" name="index" value=""""),_display_(/*17.47*/i),format.raw/*17.48*/(""""/>
-				<input type="submit" value="Delete" id="delete-"""),_display_(/*18.53*/i),format.raw/*18.54*/(""""/>
-			</form>
-		""")))}),format.raw/*20.4*/("""
-	"""),format.raw/*21.2*/("""</ul>
-	
-	<form method="post" action=""""),_display_(/*23.31*/routes/*23.37*/.Application.addTask()),format.raw/*23.59*/("""">
-		"""),_display_(/*24.4*/helper/*24.10*/.CSRF.formField),format.raw/*24.25*/("""
-		"""),format.raw/*25.3*/("""<input type="text" name="newTask"></input>
-		<input type="submit"></input>
-  </form>-->
-  
   <!-- SHOW MESSAGES -->
 <div style="margin-left:30%; width:500px; background-color: rgba(255, 255, 255, .7); box-shadow:4px 4px black;">
   <h2 style="text-align:center; width:100%; background-color: rgba(0, 0, 0, .7); color:white;">Messages</h2>
   <div style="padding-left:20px; padding-bottom:20px; padding-right:20px;">
   <h3>Public Messages</h3>
   <ul>
-    """),_display_(/*35.6*/for((pub, i) <- publics.zipWithIndex) yield /*35.43*/ {_display_(Seq[Any](format.raw/*35.45*/("""
-      """),format.raw/*36.7*/("""<!--if(pub.from == currUser)-->
-      <li><b>"""),_display_(/*37.15*/pub/*37.18*/.body),format.raw/*37.23*/("""</b><br>"""),_display_(/*37.32*/pub/*37.35*/.from),format.raw/*37.40*/(""" """),format.raw/*37.41*/("""at """),_display_(/*37.45*/pub/*37.48*/.timestamp),format.raw/*37.58*/("""</li>
-    """)))}),format.raw/*38.6*/("""
-  """),format.raw/*39.3*/("""</ul>
-  <h3>Private Messages for """),_display_(/*40.29*/currUser),format.raw/*40.37*/("""</h3>
+    """),_display_(/*17.6*/for((pub, i) <- publics.zipWithIndex) yield /*17.43*/ {_display_(Seq[Any](format.raw/*17.45*/("""
+      """),format.raw/*18.7*/("""<!--if(pub.from == currUser)-->
+      <li><b>"""),_display_(/*19.15*/pub/*19.18*/.body),format.raw/*19.23*/("""</b><br>"""),_display_(/*19.32*/pub/*19.35*/.from),format.raw/*19.40*/(""" """),format.raw/*19.41*/("""at """),_display_(/*19.45*/pub/*19.48*/.timestamp),format.raw/*19.58*/("""</li>
+    """)))}),format.raw/*20.6*/("""
+  """),format.raw/*21.3*/("""</ul>
+  <h3>Private Messages for """),_display_(/*22.29*/currUser),format.raw/*22.37*/("""</h3>
   <ul>
-    <!--#"""),format.raw/*42.10*/("""{"""),format.raw/*42.11*/("""if (msgs.isEmpty())"""),format.raw/*42.30*/("""}"""),format.raw/*42.31*/("""
-      """),format.raw/*43.7*/("""<li>None yet.</li>
-    #"""),format.raw/*44.6*/("""{"""),format.raw/*44.7*/("""/if"""),format.raw/*44.10*/("""}"""),format.raw/*44.11*/("""--> 
-    """),_display_(/*45.6*/for((msg, i) <- msgs.zipWithIndex) yield /*45.40*/ {_display_(Seq[Any](format.raw/*45.42*/("""
-      """),format.raw/*46.7*/("""<li><b>"""),_display_(/*46.15*/msg/*46.18*/.body),format.raw/*46.23*/("""</b><br>"""),_display_(/*46.32*/msg/*46.35*/.from),format.raw/*46.40*/(""" """),format.raw/*46.41*/("""at """),_display_(/*46.45*/msg/*46.48*/.timestamp),format.raw/*46.58*/("""</li>
-      <form method="post" action=""""),_display_(/*47.36*/routes/*47.42*/.Application.deleteMessage()),format.raw/*47.70*/("""">
-				"""),_display_(/*48.6*/helper/*48.12*/.CSRF.formField),format.raw/*48.27*/("""
-				"""),format.raw/*49.5*/("""<input type="hidden" name="index" value=""""),_display_(/*49.47*/i),format.raw/*49.48*/(""""/>
-				<input type="submit" value="Delete" id="delete-"""),_display_(/*50.53*/i),format.raw/*50.54*/(""""/>
+    <!--#"""),format.raw/*24.10*/("""{"""),format.raw/*24.11*/("""if (msgs.isEmpty())"""),format.raw/*24.30*/("""}"""),format.raw/*24.31*/("""
+      """),format.raw/*25.7*/("""<li>None yet.</li>
+    #"""),format.raw/*26.6*/("""{"""),format.raw/*26.7*/("""/if"""),format.raw/*26.10*/("""}"""),format.raw/*26.11*/("""--> 
+    """),_display_(/*27.6*/for((msg, i) <- msgs.zipWithIndex) yield /*27.40*/ {_display_(Seq[Any](format.raw/*27.42*/("""
+      """),format.raw/*28.7*/("""<li><b>"""),_display_(/*28.15*/msg/*28.18*/.body),format.raw/*28.23*/("""</b><br>"""),_display_(/*28.32*/msg/*28.35*/.from),format.raw/*28.40*/(""" """),format.raw/*28.41*/("""at """),_display_(/*28.45*/msg/*28.48*/.timestamp),format.raw/*28.58*/("""</li>
+      <form method="post" action=""""),_display_(/*29.36*/routes/*29.42*/.Application.deleteMessage()),format.raw/*29.70*/("""">
+				"""),_display_(/*30.6*/helper/*30.12*/.CSRF.formField),format.raw/*30.27*/("""
+				"""),format.raw/*31.5*/("""<input type="hidden" name="index" value=""""),_display_(/*31.47*/i),format.raw/*31.48*/(""""/>
+				<input type="submit" value="Delete" id="delete-"""),_display_(/*32.53*/i),format.raw/*32.54*/(""""/>
 			</form>
-      """)))}),format.raw/*52.8*/("""
-    """),format.raw/*53.5*/("""</ul>
+      """)))}),format.raw/*34.8*/("""
+    """),format.raw/*35.5*/("""</ul>
   </div>
 </div>
   <br><br>
@@ -83,31 +65,30 @@ Seq[Any](format.raw/*2.1*/("""
 
   <!--  SENDING A MESSAGE -->
   <div style="margin-left:30%; width:500px; background-color: rgba(255, 255, 255, .7); box-shadow:4px 4px black;">
-  <div>
-    <h3 style="text-align:center; width:100%; background-color: rgba(0, 0, 0, .7); color:white;">Send a Message</h3>
-  </div>
-  <div style="padding-left:20px; padding-bottom:20px; padding-right:20px;">
-  <form method="post" action=""""),_display_(/*66.32*/routes/*66.38*/.Application.sendMessage()),format.raw/*66.64*/("""">
-    """),_display_(/*67.6*/helper/*67.12*/.CSRF.formField),format.raw/*67.27*/("""
-    """),format.raw/*68.5*/("""To: 
-    <select name='userList' id='dropdownusers'>
-        <option name="public" value="public">Everyone</option>
-      """),_display_(/*71.8*/for((user, i) <- userList.zipWithIndex) yield /*71.47*/ {_display_(Seq[Any](format.raw/*71.49*/("""
-        """),format.raw/*72.9*/("""<option name=""""),_display_(/*72.24*/i),format.raw/*72.25*/("""" value=""""),_display_(/*72.35*/user),format.raw/*72.39*/("""">"""),_display_(/*72.42*/user),format.raw/*72.46*/("""</option>
-      """)))}),format.raw/*73.8*/("""
-    """),format.raw/*74.5*/("""</select>
-    <!--To: <input type="text" name="userTo"></input>-->
-    <br>
-    Message: <input type="text" name="messageText"></input>
-    <input type="submit" value="Send"></input>
-    </form>
+    <div>
+      <h3 style="text-align:center; width:100%; background-color: rgba(0, 0, 0, .7); color:white;">Send a Message</h3>
     </div>
-  </div>
+    <div style="padding-left:20px; padding-bottom:20px; padding-right:20px;">
+    <form method="post" action=""""),_display_(/*48.34*/routes/*48.40*/.Application.sendMessage()),format.raw/*48.66*/("""">
+          """),_display_(/*49.12*/helper/*49.18*/.CSRF.formField),format.raw/*49.33*/("""
+          """),format.raw/*50.11*/("""To: 
+          <select name='userList' id='dropdownusers'>
+            <option name="public" value="public">Everyone</option>
+            """),_display_(/*53.14*/for((user, i) <- userList.zipWithIndex) yield /*53.53*/ {_display_(Seq[Any](format.raw/*53.55*/("""
+            """),format.raw/*54.13*/("""<option name=""""),_display_(/*54.28*/i),format.raw/*54.29*/("""" value=""""),_display_(/*54.39*/user),format.raw/*54.43*/("""">"""),_display_(/*54.46*/user),format.raw/*54.50*/("""</option>
+          """)))}),format.raw/*55.12*/("""
+          """),format.raw/*56.11*/("""</select>
 
-	<footer style="text-align:center; position: absolute; bottom:0; left:50%;">
-		<a href=""""),_display_(/*84.13*/routes/*84.19*/.Application.logout()),format.raw/*84.40*/("""" id="logout">Logout</a>
-  </footer>
+          <br>
+          Message: <input type="text" name="messageText"></input>
+          <input type="submit" value="Send"></input>
+        </form>
+      </div>
+    </div>
 
+	  <footer style="text-align:center; position: absolute; bottom:0; left:50%; background-color: rgba(0, 0, 0, .7)">
+		  <a href=""""),_display_(/*66.15*/routes/*66.21*/.Application.logout()),format.raw/*66.42*/("""" id="logout">Logout</a>
+    </footer>
   </body>
 </html>
 """)))}))
@@ -126,11 +107,11 @@ Seq[Any](format.raw/*2.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: 2021-03-15T11:17:43.922153
+                  DATE: 2021-03-27T10:54:40.641522
                   SOURCE: /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/views/success.scala.html
-                  HASH: 503df7f114f8dbeb90bdd9d755fc2709ee4477d9
-                  MATRIX: 852->1|1143->199|1170->201|1194->217|1233->219|1260->220|1482->416|1534->452|1574->454|1605->458|1636->463|1661->467|1726->505|1741->511|1787->536|1821->544|1836->550|1872->565|1904->570|1973->612|1995->613|2078->669|2100->670|2148->688|2177->690|2242->728|2257->734|2300->756|2332->762|2347->768|2383->783|2413->786|2892->1239|2945->1276|2985->1278|3019->1285|3092->1331|3104->1334|3130->1339|3166->1348|3178->1351|3204->1356|3233->1357|3264->1361|3276->1364|3307->1374|3348->1385|3378->1388|3439->1422|3468->1430|3518->1452|3547->1453|3594->1472|3623->1473|3657->1480|3708->1504|3736->1505|3767->1508|3796->1509|3832->1519|3882->1553|3922->1555|3956->1562|3991->1570|4003->1573|4029->1578|4065->1587|4077->1590|4103->1595|4132->1596|4163->1600|4175->1603|4206->1613|4274->1654|4289->1660|4338->1688|4372->1696|4387->1702|4423->1717|4455->1722|4524->1764|4546->1765|4629->1821|4651->1822|4703->1844|4735->1849|5184->2271|5199->2277|5246->2303|5280->2311|5295->2317|5331->2332|5363->2337|5512->2460|5567->2499|5607->2501|5643->2510|5685->2525|5707->2526|5744->2536|5769->2540|5799->2543|5824->2547|5871->2564|5903->2569|6235->2874|6250->2880|6292->2901
-                  LINES: 21->1|26->2|27->3|27->3|27->3|28->4|37->13|37->13|37->13|38->14|38->14|38->14|39->15|39->15|39->15|40->16|40->16|40->16|41->17|41->17|41->17|42->18|42->18|44->20|45->21|47->23|47->23|47->23|48->24|48->24|48->24|49->25|59->35|59->35|59->35|60->36|61->37|61->37|61->37|61->37|61->37|61->37|61->37|61->37|61->37|61->37|62->38|63->39|64->40|64->40|66->42|66->42|66->42|66->42|67->43|68->44|68->44|68->44|68->44|69->45|69->45|69->45|70->46|70->46|70->46|70->46|70->46|70->46|70->46|70->46|70->46|70->46|70->46|71->47|71->47|71->47|72->48|72->48|72->48|73->49|73->49|73->49|74->50|74->50|76->52|77->53|90->66|90->66|90->66|91->67|91->67|91->67|92->68|95->71|95->71|95->71|96->72|96->72|96->72|96->72|96->72|96->72|96->72|97->73|98->74|108->84|108->84|108->84
+                  HASH: 3ad761eb1a8a9b4b603c905d6f8b9b5818d73742
+                  MATRIX: 852->1|1143->199|1170->201|1194->217|1233->219|1260->220|1804->738|1857->775|1897->777|1931->784|2004->830|2016->833|2042->838|2078->847|2090->850|2116->855|2145->856|2176->860|2188->863|2219->873|2260->884|2290->887|2351->921|2380->929|2430->951|2459->952|2506->971|2535->972|2569->979|2620->1003|2648->1004|2679->1007|2708->1008|2744->1018|2794->1052|2834->1054|2868->1061|2903->1069|2915->1072|2941->1077|2977->1086|2989->1089|3015->1094|3044->1095|3075->1099|3087->1102|3118->1112|3186->1153|3201->1159|3250->1187|3284->1195|3299->1201|3335->1216|3367->1221|3436->1263|3458->1264|3541->1320|3563->1321|3615->1343|3647->1348|4106->1780|4121->1786|4168->1812|4209->1826|4224->1832|4260->1847|4299->1858|4465->1997|4520->2036|4560->2038|4601->2051|4643->2066|4665->2067|4702->2077|4727->2081|4757->2084|4782->2088|4834->2109|4873->2120|5215->2435|5230->2441|5272->2462
+                  LINES: 21->1|26->2|27->3|27->3|27->3|28->4|41->17|41->17|41->17|42->18|43->19|43->19|43->19|43->19|43->19|43->19|43->19|43->19|43->19|43->19|44->20|45->21|46->22|46->22|48->24|48->24|48->24|48->24|49->25|50->26|50->26|50->26|50->26|51->27|51->27|51->27|52->28|52->28|52->28|52->28|52->28|52->28|52->28|52->28|52->28|52->28|52->28|53->29|53->29|53->29|54->30|54->30|54->30|55->31|55->31|55->31|56->32|56->32|58->34|59->35|72->48|72->48|72->48|73->49|73->49|73->49|74->50|77->53|77->53|77->53|78->54|78->54|78->54|78->54|78->54|78->54|78->54|79->55|80->56|90->66|90->66|90->66
                   -- GENERATED --
               */
           

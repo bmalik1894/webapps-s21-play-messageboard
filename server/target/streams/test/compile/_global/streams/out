@@ -1,4 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/test/ApplicationInMemoryModelTest.scala:19:70: not found: value Message[0m
-[0m[[0m[31merror[0m] [0m[0m            ApplicationInMemoryModel.getMessages("web") mustBe (List(Message("mlewis", "Ok google.", "2002-09-04 06:29")))[0m
-[0m[[0m[31merror[0m] [0m[0m                                                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/test/ApplicationInMemoryModelTest.scala:85:13: Missing closing brace `}` assumed here[0m
+[0m[[0m[31merror[0m] [0m[0m            pageTitle mustBe "Login"[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

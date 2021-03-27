@@ -8,15 +8,12 @@ import java.time.LocalDateTime
 object ApplicationInMemoryModel {
 
     case class Message(from:String, body:String, timestamp:String)
-
+    //private val local = LocalDateTime.from(ZoneId.of("CDT"))
     private val users = Map[String, String]("mlewis" -> "prof", "web" -> "apps", "user" -> "pass")
-    //private val users1 = Map[String, String]("mlewis" -> "prof", "web" -> "apps", "user" -> "pass")
     private val tasks = Map[String, Seq[String]]("user" -> List("A", "B", "C"), "web" -> List("app1", "app2"), "mlewis" -> List("Code", "Space"))
     private val messages = Map[String, Seq[Message]]("web" -> List(Message("mlewis", "Ok google.", "2002-09-04 06:29")), 
     "public" -> List(Message("mlewis", "lorem ipsum", "2002-09-04 06:38")))
 
-    //private val messages1 = concurrent.ConcurrentMap[String, Seq[Message]]("web" -> List(Message("mlewis", "Ok google.", "2002-09-04 06:29")), 
-    //"public" -> List(Message("mlewis", "lorem ipsum", "2002-09-04 06:38")))
 
     def validateUser(username: String, password:String): Boolean = {
         users.get(username).map(_ == password).getOrElse(false)
@@ -51,7 +48,7 @@ object ApplicationInMemoryModel {
     def listUsers() = users.keySet.toList
 
     def sendMessage(username:String, target:String, message:String) = {
-        val datetime = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm").format(LocalDateTime.now)
+        val datetime = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm").format(LocalDateTime.now())
         synchronized {
             if (target == "all") {
                 messages("public") = Message(username, message, datetime) +: messages.get("public").getOrElse(Nil)

@@ -1,24 +1,11 @@
-[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/models/ApplicationInMemoryModel.scala:28:19: value addOne is not a member of scala.collection.immutable.Map[String,String][0m
-[0m[[0m[31merror[0m] [0m[0m            users.addOne(username, password)[0m
-[0m[[0m[31merror[0m] [0m[0m                  ^[0m
-[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/models/ApplicationInMemoryModel.scala:38:9: value update is not a member of scala.collection.immutable.Map[String,Seq[String]][0m
-[0m[[0m[31merror[0m] [0m[0mdid you mean updated?[0m
-[0m[[0m[31merror[0m] [0m[0m        tasks(username) = task +: tasks.get(username).getOrElse(Nil)[0m
-[0m[[0m[31merror[0m] [0m[0m        ^[0m
-[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/models/ApplicationInMemoryModel.scala:44:13: value update is not a member of scala.collection.immutable.Map[String,Seq[String]][0m
-[0m[[0m[31merror[0m] [0m[0mdid you mean updated?[0m
-[0m[[0m[31merror[0m] [0m[0m            tasks(username) = tasks(username).patch(index, Nil, 1)[0m
-[0m[[0m[31merror[0m] [0m[0m            ^[0m
-[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/models/ApplicationInMemoryModel.scala:54:13: value update is not a member of scala.collection.immutable.Map[String,Seq[models.ApplicationInMemoryModel.Message]][0m
-[0m[[0m[31merror[0m] [0m[0mdid you mean updated?[0m
-[0m[[0m[31merror[0m] [0m[0m            messages("public") = Message(username, message, datetime) +: messages.get("public").getOrElse(Nil)[0m
-[0m[[0m[31merror[0m] [0m[0m            ^[0m
-[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/models/ApplicationInMemoryModel.scala:55:16: value update is not a member of scala.collection.immutable.Map[String,Seq[models.ApplicationInMemoryModel.Message]][0m
-[0m[[0m[31merror[0m] [0m[0mdid you mean updated?[0m
-[0m[[0m[31merror[0m] [0m[0m        } else messages(target) = Message(username, message, datetime) +: messages.get(target).getOrElse(Nil) [0m
-[0m[[0m[31merror[0m] [0m[0m               ^[0m
-[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/models/ApplicationInMemoryModel.scala:63:13: value update is not a member of scala.collection.immutable.Map[String,Seq[models.ApplicationInMemoryModel.Message]][0m
-[0m[[0m[31merror[0m] [0m[0mdid you mean updated?[0m
-[0m[[0m[31merror[0m] [0m[0m            messages(username) = messages(username).patch(index, Nil, 1)[0m
-[0m[[0m[31merror[0m] [0m[0m            ^[0m
-[0m[[0m[31merror[0m] [0m[0m6 errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/target/scala-2.13/twirl/main/views/html/login.template.scala:50:80: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : (String, String)[0m
+[0m[[0m[31merror[0m] [0m[0m required: (Symbol, Any)[0m
+[0m[[0m[31merror[0m] [0m[0m		"""),_display_(/*26.4*/helper/*26.10*/.inputText(loginForm("Username"), "id" -> "inputusername")),format.raw/*26.68*/("""[0m
+[0m[[0m[31merror[0m] [0m[0m		                                                                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/target/scala-2.13/twirl/main/views/html/login.template.scala:51:84: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : (String, String)[0m
+[0m[[0m[31merror[0m] [0m[0m required: (Symbol, Any)[0m
+[0m[[0m[31merror[0m] [0m[0m		"""),_display_(/*27.4*/helper/*27.10*/.inputPassword(loginForm("Password"), "id" -> "inputpass")),format.raw/*27.68*/("""[0m
+[0m[[0m[31merror[0m] [0m[0m		                                                                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
