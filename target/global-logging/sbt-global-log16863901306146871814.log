@@ -1,0 +1,13 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(compile, Some(19a06bef-5dc1-4ce8-bea7-83d6eaf7d0b1), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / compile[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/models/ApplicationInMemoryModel.scala:13:37: class java.util.concurrent.ConcurrentMap is not a value[0m
+[0m[[0m[31merror[0m] [0m[0m    private val users1 = concurrent.ConcurrentMap("mlewis" -> "prof", "web" -> "apps", "user" -> "pass")[0m
+[0m[[0m[31merror[0m] [0m[0m                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 21 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 3 s, completed Mar 17, 2021, 2:26:08 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
+[0m[[0m[0minfo[0m] [0m[0mshutting down sbt server[0m

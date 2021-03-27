@@ -1,0 +1,25 @@
+[0m[[0m[0minfo[0m] [0m[0mFast optimizing /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/play-client-fastopt[0m
+[0m[[0m[0mdebug[0m] [0m[0mLinker: Compute reachability: 651880 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mLinker: Assemble LinkedClasses: 58391 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mLinker: 771405 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mOptimizer: Batch mode: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mOptimizer: Incremental part: 237024 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mOptimizer: Optimizing 908 methods.[0m
+[0m[[0m[0mdebug[0m] [0m[0mOptimizer: Optimizer part: 704146 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mOptimizer: 948446 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: Compute reachability: 90962 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: Assemble LinkedClasses: 6661 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: 129887 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mModule Splitter: Calculate Dependency Info: 2625 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mModule Splitter: Analyze Modules: 924 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mModule Splitter: Assemble Modules: 7834 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mModule Splitter: 22884 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: Generate Classes: 895564 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: Write trees: 72267 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: The set of dangerous global refs has changed. Going to re-generate the world.[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: Generate Classes: 334092 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: Write trees: 5804 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: Class tree cache stats: reused: 0 -- invalidated: 434[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: Method tree cache stats: reused: 0 -- invalidated: 876[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: 1362241 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mBasicBackend: Write result: 218790 us[0m

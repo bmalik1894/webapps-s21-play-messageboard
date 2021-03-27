@@ -1,0 +1,38 @@
+[0m[[0m[0mdebug[0m] [0m[0mjavaOptions: Vector()[0m
+[0m[[0m[0mdebug[0m] [0m[0mForking tests - parallelism = false[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreate a single-thread test executor[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunner for org.specs2.runner.Specs2Framework produced 0 initial tasks for 0 tests.[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunner for org.scalatest.tools.Framework produced 2 initial tasks for 2 tests.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(ControllerSpec, sbt.ForkMain$SubclassFingerscan@7b02881e, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mControllerSpec:[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(ApplicationInMemoryModelTest, sbt.ForkMain$SubclassFingerscan@1ebd319f, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mApplicationInMemoryModelTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mApplicationInMemoryModel[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- must do valid login for default user[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- must reject bad user[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- must reject bad password[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- must reject bad user and password[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- must create new user with no tasks[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- must reject create existing user[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- must get correct mssages[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- must add new message for existing user[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- must remove message for existing user[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mApplication[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- must login to page successfully[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- must login to page unsuccessfully[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- must create new user successfully[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- must create new user unsuccessfully[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 13 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunner for com.novocode.junit.JUnitFramework produced 0 initial tasks for 0 tests.[0m
+[0m[[0m[0mdebug[0m] [0m[0mSummary for specs2 not available.[0m
+[0m[[0m[0minfo[0m] [0m[0mScalaTest[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 8 seconds, 94 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 13[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 2, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 13, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mSummary for JUnit not available.[0m
+[0m[[0m[0minfo[0m] [0m[0mPassed: Total 13, Failed 0, Errors 0, Passed 13[0m
+[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ControllerSpec[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ApplicationInMemoryModelTest[0m

@@ -1,0 +1,8 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(compile, Some(e5e60de7-e097-4727-bfe4-254e7fd9c6c8), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / compile[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 2 Scala sources to /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/target/scala-2.13/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 21 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 5 s, completed Mar 21, 2021, 4:44:38 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m

@@ -1,0 +1,33 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/target/scala-2.13/play-server_2.13-0.1.0-SNAPSHOT-web-assets.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/d7af756cd6d2d1e7cb932939ecc13992-play-client-fastopt.js[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/target/web/digest/d7af756cd6d2d1e7cb932939ecc13992-play-client-fastopt.js[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/images/84a01dc6c53f0d2a58a2f7ff9e17a294-favicon.png[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/target/web/digest/images/84a01dc6c53f0d2a58a2f7ff9e17a294-favicon.png[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/1ae5168ac609c989ca3e/edu/trinity/videoquizreact/cc84ad80bc4919aa220de4dbf5803460-ScalaJSExample.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/target/web/digest/1ae5168ac609c989ca3e/edu/trinity/videoquizreact/cc84ad80bc4919aa220de4dbf5803460-ScalaJSExample.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/play-client-fastopt.js.map[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/play-client-fastopt.js.map[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/play-client-fastopt.js.gz[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/target/web/gzipCompress/play-client-fastopt.js.gz[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/1ae5168ac609c989ca3e/edu/trinity/videoquizreact/ScalaJSExample.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/edu/trinity/videoquizreact/ScalaJSExample.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/images/favicon.png[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/public/images/favicon.png[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/play-client-fastopt.js.map.md5[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/target/web/digest/play-client-fastopt.js.map.md5[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/images/favicon.png.md5[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/target/web/digest/images/favicon.png.md5[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/play-client-fastopt.js.md5[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/target/web/digest/play-client-fastopt.js.md5[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/d7af756cd6d2d1e7cb932939ecc13992-play-client-fastopt.js.gz[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/target/web/gzipCompress/d7af756cd6d2d1e7cb932939ecc13992-play-client-fastopt.js.gz[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/3ee0b14a4ca9c5ec9267d36a36618247-play-client-fastopt.js.map[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/target/web/digest/3ee0b14a4ca9c5ec9267d36a36618247-play-client-fastopt.js.map[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/play-client-fastopt.js[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/play-client-fastopt.js[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/images[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/public/images[0m
+[0m[[0m[0mdebug[0m] [0m[0m	public/1ae5168ac609c989ca3e/edu/trinity/videoquizreact/ScalaJSExample.scala.md5[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/target/web/digest/1ae5168ac609c989ca3e/edu/trinity/videoquizreact/ScalaJSExample.scala.md5[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m

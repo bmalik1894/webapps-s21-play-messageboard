@@ -1,0 +1,13 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/target/scala-2.13/play-server_2.13-0.1.0-SNAPSHOT-sources.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	routes[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/conf/routes[0m
+[0m[[0m[0mdebug[0m] [0m[0m	application.conf[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/conf/application.conf[0m
+[0m[[0m[0mdebug[0m] [0m[0m	heroku.conf[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/conf/heroku.conf[0m
+[0m[[0m[0mdebug[0m] [0m[0m	models/ApplicationInMemoryModel.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/models/ApplicationInMemoryModel.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/Application.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/controllers/Application.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
