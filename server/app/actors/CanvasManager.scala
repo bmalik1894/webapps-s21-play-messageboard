@@ -7,7 +7,7 @@ import scala.util.Random
 
 class CanvasManager extends Actor {
     import CanvasManager._
-    private var characterNames = Array("Badger", "Armadillo", "Dragonfly", "Camel", "Flamingo", "Tortise", "Ostritch", "Python", "Rat")
+    private var characterNames = Array("Badger", "Armadillo", "Dragonfly", "Camel", "Flamingo", "Tortoise", "Ostritch", "Python", "Rat")
     private var colors = Array("blue", "red", "orange", "black", "brown", "gray", "purple", "pink", "green")
     var users:Array[User] = Array()
     private val random = new Random
