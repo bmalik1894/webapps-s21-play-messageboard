@@ -1,0 +1,14 @@
+@()(implicit request: RequestHeader, flash:Flash)
+
+@main("Canvas Game") {
+<body style="background-image: url(https://image.shutterstock.com/image-photo/mountains-under-mist-morning-amazing-600w-1725825019.jpg); background-size:100% 100%;">
+    <h3 id="title" style="left:50%">Canvas</p>
+        <input type="hidden" id="ws-route" value="@routes.WebSocket.socket().absoluteURL()">
+        <canvas width="1280" height="1024" id="canvasId">
+    </canvas>
+    <div style="text-align:center; position: relative; bottom:0; width:100%; background-color: rgba(0, 0, 0, 1)">
+        <a href="@routes.Application.logout()" id="logout">Go back</a>
+    </div>
+    <script src="@routes.Assets.versioned("javascript/canvas.js")"></script>
+</body>
+}
