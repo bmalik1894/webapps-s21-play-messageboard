@@ -1,7 +1,7 @@
 "use strict"
 
 const socketRoute = document.getElementById("ws-route").value;
-const socket = new WebSocket(socketRoute.replace("http","ws"));
+const socket = new WebSocket(socketRoute.replace("https","wss"));
 let canvas = document.getElementById("canvasId");
 let ctx = canvas.getContext("2d");
 ctx.font = "20px Arial";
