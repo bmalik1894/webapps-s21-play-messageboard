@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite hostname="vdi-linux-019" name="ApplicationSpec" tests="2" errors="0" failures="1" skipped="0" time="0.559" timestamp="2021-03-27T13:20:30">
+                     <properties>
+      <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/><property name="java.specification.version" value="11"/><property name="sun.cpu.isalist" value=""/><property name="sun.jnu.encoding" value="UTF-8"/><property name="sun.arch.data.model" value="64"/><property name="java.vendor.url" value="https://openjdk.java.net/"/><property name="sun.boot.library.path" value="/usr/java/jdk-11.0.10/lib"/><property name="sun.java.command" value="/usr/share/sbt/bin/sbt-launch.jar"/><property name="jdk.debug" value="release"/><property name="java.specification.vendor" value="Oracle Corporation"/><property name="java.version.date" value="2021-01-19"/><property name="java.home" value="/usr/java/jdk-11.0.10"/><property name="file.separator" value="/"/><property name="java.vm.compressedOopsMode" value="32-bit"/><property name="line.separator" value="
+"/><property name="java.specification.name" value="Java Platform API Specification"/><property name="java.vm.specification.vendor" value="Oracle Corporation"/><property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/><property name="java.runtime.version" value="11.0.10+8-LTS-162"/><property name="user.name" value="bmalik"/><property name="log4j.ignoreTCL" value="true"/><property name="file.encoding" value="UTF-8"/><property name="jnidispatch.path" value="/users/bmalik/.cache/JNA/temp/jna3231572443801640053.tmp"/><property name="java.vendor.version" value="18.9"/><property name="jna.loaded" value="true"/><property name="java.io.tmpdir" value="/tmp"/><property name="java.version" value="11.0.10"/><property name="java.vm.specification.name" value="Java Virtual Machine Specification"/><property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/><property name="sun.os.patch.level" value="unknown"/><property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/><property name="java.vendor" value="Oracle Corporation"/><property name="scala.ext.dirs" value="/users/bmalik/.sbt/0.13/java9-rt-ext-oracle_corporation_11_0_10"/><property name="sun.io.unicode.encoding" value="UnicodeLittle"/><property name="sun.desktop" value="gnome"/><property name="java.class.path" value="/usr/share/sbt/bin/sbt-launch.jar"/><property name="java.vm.vendor" value="Oracle Corporation"/><property name="jline.shutdownhook" value="false"/><property name="user.timezone" value="America/Chicago"/><property name="os.name" value="Linux"/><property name="java.vm.specification.version" value="11"/><property name="sun.java.launcher" value="SUN_STANDARD"/><property name="user.country" value="US"/><property name="sun.cpu.endian" value="little"/><property name="user.home" value="/users/bmalik"/><property name="user.language" value="en"/><property name="swoval.tmpdir" value="/users/bmalik/.sbt/1.0"/><property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/><property name="jline.esc.timeout" value="0"/><property name="path.separator" value=":"/><property name="os.version" value="3.10.0-1160.15.2.el7.x86_64"/><property name="jna.nosys" value="true"/><property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/><property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/><property name="jna.platform.library.path" value="/usr/lib64:/lib64:/usr/lib:/lib:/usr/local/lib:/usr/lib64/atlas:/usr/lib64/dyninst:/usr/lib64/qt-3.3/lib:/usr/lib64/mysql:/usr/lib64/iscsi:/usr/lib64//bind9-export:/usr/lib64/tcl8.5:/usr/lib64/R/lib"/><property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/><property name="user.dir" value="/users/bmalik/github/webapps/web-tasks-s21-bmalik1894"/><property name="os.arch" value="amd64"/><property name="java.vm.info" value="mixed mode"/><property name="java.vm.version" value="11.0.10+8-LTS-162"/><property name="java.class.version" value="55.0"/>
+    </properties>
+                     <testcase classname="ApplicationSpec" name="Application should::send 404 on a bad request" time="0.293">
+                                                 
+                                               </testcase><testcase classname="ApplicationSpec" name="Application should::render the index page" time="0.266">
+                                                 <failure message="java.lang.Exception: 
+
+&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Login&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; media=&quot;screen&quot; href=&quot;/versionedAssets/stylesheets/main.css&quot;&gt;
+    &lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;/versionedAssets/images/favicon.png&quot;&gt;
+
+    &lt;!-- Libraries for React --&gt;
+    &lt;!--&lt;script src=&quot;https://unpkg.com/react@16/umd/react.development.js&quot; crossorigin&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://unpkg.com/react-dom@16/umd/react-dom.development.js&quot; crossorigin&gt;&lt;/script&gt;--&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    
+  	
+    
+  &lt;body style=&quot;background-color:rgba(161, 110, 209, .7);&quot;&gt;
+
+&lt;div style=&quot;margin-left:30%; width:500px; background-color: rgba(255, 255, 255, .7); box-shadow:4px 4px black;&quot;&gt;
+  &lt;div&gt;
+    &lt;h3 style=&quot;text-align:center; width:100%; background-color: rgba(0, 0, 0, .7); color:white;&quot;&gt;Login&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div style=&quot;padding-left:20px; padding-bottom:20px; padding-right:20px;&quot;&gt;
+   
+&lt;form action=&quot;/validateForm&quot; method=&quot;POST&quot; &gt;
+    
+    &lt;input type=&quot;hidden&quot; name=&quot;csrfToken&quot; value=&quot;3b3e822fd50a1d16d933440b0d8c317c412c6c4e-1616869230411-4e3bdb70ccc47f665d1ea21a&quot;/&gt;
+    
+
+&lt;dl class=&quot; &quot; id=&quot;post-username_field&quot;&gt;
+    
+    &lt;dt&gt;&lt;label for=&quot;post-username&quot;&gt;Username&lt;/label&gt;&lt;/dt&gt;
+    
+    &lt;dd&gt;
+    &lt;input type=&quot;text&quot; id=&quot;post-username&quot; name=&quot;Username&quot; value=&quot;&quot; /&gt;
+&lt;/dd&gt;
+    
+    
+        &lt;dd class=&quot;info&quot;&gt;Minimum length: 3&lt;/dd&gt;
+    
+        &lt;dd class=&quot;info&quot;&gt;Maximum length: 10&lt;/dd&gt;
+    
+&lt;/dl&gt;
+
+
+
+		
+&lt;dl class=&quot; &quot; id=&quot;post-pass_field&quot;&gt;
+    
+    &lt;dt&gt;&lt;label for=&quot;post-pass&quot;&gt;Password&lt;/label&gt;&lt;/dt&gt;
+    
+    &lt;dd&gt;
+    &lt;input type=&quot;password&quot; id=&quot;post-pass&quot; name=&quot;Password&quot; /&gt;
+&lt;/dd&gt;
+    
+    
+        &lt;dd class=&quot;info&quot;&gt;Minimum length: 4&lt;/dd&gt;
+    
+&lt;/dl&gt;
+
+
+
+		&lt;div class=&quot;form-actions&quot;&gt;
+			&lt;button type=&quot;submit&quot;&gt;Login&lt;/button&gt;
+		&lt;/div&gt;
+  
+&lt;/form&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;bottom:0; margin-top:200px; margin-left:30%; width:500px; background-color: rgba(255, 255, 255, .7); box-shadow:4px 4px black;&quot;&gt;
+   
+&lt;form action=&quot;/createUserForm&quot; method=&quot;POST&quot; &gt;
+    
+		&lt;input type=&quot;hidden&quot; name=&quot;csrfToken&quot; value=&quot;3b3e822fd50a1d16d933440b0d8c317c412c6c4e-1616869230411-4e3bdb70ccc47f665d1ea21a&quot;/&gt;
+    &lt;h3 style=&quot;text-align:center; width:100%; background-color: rgba(0, 0, 0, .7); color:white;&quot;&gt;Create Username&lt;/h3&gt;
+    &lt;div style=&quot;padding-left:20px; padding-bottom:20px; padding-right:20px;&quot;&gt;
+		
+
+&lt;dl class=&quot; &quot; id=&quot;create-username_field&quot;&gt;
+    
+    &lt;dt&gt;&lt;label for=&quot;create-username&quot;&gt;Username&lt;/label&gt;&lt;/dt&gt;
+    
+    &lt;dd&gt;
+    &lt;input type=&quot;text&quot; id=&quot;create-username&quot; name=&quot;Username&quot; value=&quot;&quot; /&gt;
+&lt;/dd&gt;
+    
+    
+        &lt;dd class=&quot;info&quot;&gt;Minimum length: 3&lt;/dd&gt;
+    
+        &lt;dd class=&quot;info&quot;&gt;Maximum length: 10&lt;/dd&gt;
+    
+&lt;/dl&gt;
+
+
+
+		
+&lt;dl class=&quot; &quot; id=&quot;create-pass_field&quot;&gt;
+    
+    &lt;dt&gt;&lt;label for=&quot;create-pass&quot;&gt;Password&lt;/label&gt;&lt;/dt&gt;
+    
+    &lt;dd&gt;
+    &lt;input type=&quot;password&quot; id=&quot;create-pass&quot; name=&quot;Password&quot; /&gt;
+&lt;/dd&gt;
+    
+    
+        &lt;dd class=&quot;info&quot;&gt;Minimum length: 4&lt;/dd&gt;
+    
+&lt;/dl&gt;
+
+
+
+		&lt;div class=&quot;form-actions&quot;&gt;
+			&lt;button type=&quot;submit&quot;&gt;Create User&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+	
+&lt;/form&gt;
+
+&lt;/div&gt;
+  &lt;div id=&quot;root2&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+
+    
+  &lt;/body&gt;
+&lt;/html&gt;
+ doesn't contain 'shouts out'" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.lang.Exception: 
+
+&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Login&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; media=&quot;screen&quot; href=&quot;/versionedAssets/stylesheets/main.css&quot;&gt;
+    &lt;link rel=&quot;shortcut icon&quot; type=&quot;image/png&quot; href=&quot;/versionedAssets/images/favicon.png&quot;&gt;
+
+    &lt;!-- Libraries for React --&gt;
+    &lt;!--&lt;script src=&quot;https://unpkg.com/react@16/umd/react.development.js&quot; crossorigin&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://unpkg.com/react-dom@16/umd/react-dom.development.js&quot; crossorigin&gt;&lt;/script&gt;--&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    
+  	
+    
+  &lt;body style=&quot;background-color:rgba(161, 110, 209, .7);&quot;&gt;
+
+&lt;div style=&quot;margin-left:30%; width:500px; background-color: rgba(255, 255, 255, .7); box-shadow:4px 4px black;&quot;&gt;
+  &lt;div&gt;
+    &lt;h3 style=&quot;text-align:center; width:100%; background-color: rgba(0, 0, 0, .7); color:white;&quot;&gt;Login&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div style=&quot;padding-left:20px; padding-bottom:20px; padding-right:20px;&quot;&gt;
+   
+&lt;form action=&quot;/validateForm&quot; method=&quot;POST&quot; &gt;
+    
+    &lt;input type=&quot;hidden&quot; name=&quot;csrfToken&quot; value=&quot;3b3e822fd50a1d16d933440b0d8c317c412c6c4e-1616869230411-4e3bdb70ccc47f665d1ea21a&quot;/&gt;
+    
+
+&lt;dl class=&quot; &quot; id=&quot;post-username_field&quot;&gt;
+    
+    &lt;dt&gt;&lt;label for=&quot;post-username&quot;&gt;Username&lt;/label&gt;&lt;/dt&gt;
+    
+    &lt;dd&gt;
+    &lt;input type=&quot;text&quot; id=&quot;post-username&quot; name=&quot;Username&quot; value=&quot;&quot; /&gt;
+&lt;/dd&gt;
+    
+    
+        &lt;dd class=&quot;info&quot;&gt;Minimum length: 3&lt;/dd&gt;
+    
+        &lt;dd class=&quot;info&quot;&gt;Maximum length: 10&lt;/dd&gt;
+    
+&lt;/dl&gt;
+
+
+
+		
+&lt;dl class=&quot; &quot; id=&quot;post-pass_field&quot;&gt;
+    
+    &lt;dt&gt;&lt;label for=&quot;post-pass&quot;&gt;Password&lt;/label&gt;&lt;/dt&gt;
+    
+    &lt;dd&gt;
+    &lt;input type=&quot;password&quot; id=&quot;post-pass&quot; name=&quot;Password&quot; /&gt;
+&lt;/dd&gt;
+    
+    
+        &lt;dd class=&quot;info&quot;&gt;Minimum length: 4&lt;/dd&gt;
+    
+&lt;/dl&gt;
+
+
+
+		&lt;div class=&quot;form-actions&quot;&gt;
+			&lt;button type=&quot;submit&quot;&gt;Login&lt;/button&gt;
+		&lt;/div&gt;
+  
+&lt;/form&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;bottom:0; margin-top:200px; margin-left:30%; width:500px; background-color: rgba(255, 255, 255, .7); box-shadow:4px 4px black;&quot;&gt;
+   
+&lt;form action=&quot;/createUserForm&quot; method=&quot;POST&quot; &gt;
+    
+		&lt;input type=&quot;hidden&quot; name=&quot;csrfToken&quot; value=&quot;3b3e822fd50a1d16d933440b0d8c317c412c6c4e-1616869230411-4e3bdb70ccc47f665d1ea21a&quot;/&gt;
+    &lt;h3 style=&quot;text-align:center; width:100%; background-color: rgba(0, 0, 0, .7); color:white;&quot;&gt;Create Username&lt;/h3&gt;
+    &lt;div style=&quot;padding-left:20px; padding-bottom:20px; padding-right:20px;&quot;&gt;
+		
+
+&lt;dl class=&quot; &quot; id=&quot;create-username_field&quot;&gt;
+    
+    &lt;dt&gt;&lt;label for=&quot;create-username&quot;&gt;Username&lt;/label&gt;&lt;/dt&gt;
+    
+    &lt;dd&gt;
+    &lt;input type=&quot;text&quot; id=&quot;create-username&quot; name=&quot;Username&quot; value=&quot;&quot; /&gt;
+&lt;/dd&gt;
+    
+    
+        &lt;dd class=&quot;info&quot;&gt;Minimum length: 3&lt;/dd&gt;
+    
+        &lt;dd class=&quot;info&quot;&gt;Maximum length: 10&lt;/dd&gt;
+    
+&lt;/dl&gt;
+
+
+
+		
+&lt;dl class=&quot; &quot; id=&quot;create-pass_field&quot;&gt;
+    
+    &lt;dt&gt;&lt;label for=&quot;create-pass&quot;&gt;Password&lt;/label&gt;&lt;/dt&gt;
+    
+    &lt;dd&gt;
+    &lt;input type=&quot;password&quot; id=&quot;create-pass&quot; name=&quot;Password&quot; /&gt;
+&lt;/dd&gt;
+    
+    
+        &lt;dd class=&quot;info&quot;&gt;Minimum length: 4&lt;/dd&gt;
+    
+&lt;/dl&gt;
+
+
+
+		&lt;div class=&quot;form-actions&quot;&gt;
+			&lt;button type=&quot;submit&quot;&gt;Create User&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+	
+&lt;/form&gt;
+
+&lt;/div&gt;
+  &lt;div id=&quot;root2&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+
+    
+  &lt;/body&gt;
+&lt;/html&gt;
+ doesn't contain 'shouts out'
+	at ApplicationSpec$$anon$2.delayedEndpoint$ApplicationSpec$$anon$2$1(ApplicationSpec.scala:24)
+	at ApplicationSpec$$anon$2$delayedInit$body.apply(ApplicationSpec.scala:19)
+	at play.api.test.WithApplication.$anonfun$around$2(Specs.scala:58)
+	at play.api.test.PlayRunners.$anonfun$running$2(Helpers.scala:84)
+	at play.api.test.PlayRunners.runSynchronized(Helpers.scala:59)
+	at play.api.test.PlayRunners.runSynchronized$(Helpers.scala:53)
+	at play.api.test.Helpers$.runSynchronized(Helpers.scala:672)
+	at play.api.test.PlayRunners.running(Helpers.scala:82)
+	at play.api.test.PlayRunners.running$(Helpers.scala:80)
+	at play.api.test.Helpers$.running(Helpers.scala:672)
+	at play.api.test.WithApplication.around(Specs.scala:58)
+	at play.api.test.WithApplication.delayedInit(Specs.scala:50)
+	at ApplicationSpec$$anon$2.&lt;init&gt;(ApplicationSpec.scala:19)
+	at ApplicationSpec.$anonfun$new$6(ApplicationSpec.scala:19)
+</failure>
+                                               </testcase>
+                     <system-out><![CDATA[]]></system-out>
+                     <system-err><![CDATA[]]></system-err>
+                   </testsuite>

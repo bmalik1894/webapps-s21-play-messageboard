@@ -150,14 +150,11 @@ class MessageComponent extends React.Component {
   componentDidMount() {
     socket.send("New user connected:" + thisUser);
     socket.send("GET MESSAGES.");
-    this.loadMessages();
     this.requestUsers();
-    console.log("loaded messages");
   }
 
   render() {
     socket.onmessage = (event) => this.handleEvents(event.data);
-    this.requestUsers();
     return ce('div', null,
       'Messages',
       ce('br'),
@@ -175,7 +172,9 @@ class MessageComponent extends React.Component {
       ce('span', {}, "Logged in as "),
       ce('span', {style: {fontWeight:"bold"}}, thisUser),
       ce('br'),
-      ce('button', { onClick: e => this.props.doLogout() }, 'Log out')
+      ce('span', {}, "If user drop-down doesn't change try a second time."),
+      ce('br'),
+      ce('button', { onClick: e => this.disconnect(e) }, 'Log out')
     );
   }
   //////////////////////////////////////////////////////////
@@ -196,12 +195,9 @@ class MessageComponent extends React.Component {
         let puredata = selfmessages[i].split("`"); 
         let newmsg = new Message(puredata[2], puredata[0], puredata[1], puredata[3]);
         if (!messageAlreadyExists(newmsg)) {
-          console.log("pushing new message");
           messages.push(newmsg);
           this.loadMessages()
-        } else {
-          console.log("not equal");
-        }
+        } 
       }
     }
 
@@ -210,9 +206,13 @@ class MessageComponent extends React.Component {
     socket.send("Get users.");
   }
 
+  disconnect(e) {
+    socket.send("User disconnected.");
+    this.props.doLogout();
+  }
+
   setTarget(e) {
     this.setState({toUser: e.target.value});
-    console.log("toUser = " + this.state.toUser)
     document.getElementById("userDropDown").value = this.state.toUser;
     document.getElementById("userDropDown").text = this.state.toUser;
   }

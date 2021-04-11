@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/conf/routes
-// @DATE:Mon Mar 15 11:17:43 CDT 2021
+// @DATE:Sat Apr 10 20:10:38 CDT 2021
 
 import play.api.mvc.Call
 
@@ -10,23 +10,77 @@ import _root_.controllers.Assets.Asset
 // @LINE:6
 package controllers {
 
-  // @LINE:21
+  // @LINE:24
+  class ReverseMessageboard(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:26
+    def validate(): Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "validateMB")
+    }
+  
+    // @LINE:25
+    def socket(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "messageboardsocket")
+    }
+  
+    // @LINE:27
+    def createUser(): Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "creatUserMB")
+    }
+  
+    // @LINE:24
+    def mainload(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "messageboard")
+    }
+  
+  }
+
+  // @LINE:30
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:21
+    // @LINE:30
     def at(file:String): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[String]].unbind("file", file))
     }
   
-    // @LINE:22
+    // @LINE:31
     def versioned(file:Asset): Call = {
       implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"))); _rrc
       Call("GET", _prefix + { _defaultPrefix } + "versionedAssets/" + implicitly[play.api.mvc.PathBindable[Asset]].unbind("file", file))
+    }
+  
+  }
+
+  // @LINE:20
+  class ReverseWebSocket(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:21
+    def socket(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "CanvasSocket")
+    }
+  
+    // @LINE:20
+    def index(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "Canvas")
     }
   
   }

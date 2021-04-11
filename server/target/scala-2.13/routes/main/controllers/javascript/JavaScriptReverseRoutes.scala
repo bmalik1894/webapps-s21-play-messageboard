@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/conf/routes
-// @DATE:Mon Mar 15 11:17:43 CDT 2021
+// @DATE:Sat Apr 10 20:10:38 CDT 2021
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -10,7 +10,57 @@ import _root_.controllers.Assets.Asset
 // @LINE:6
 package controllers.javascript {
 
-  // @LINE:21
+  // @LINE:24
+  class ReverseMessageboard(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:26
+    def validate: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Messageboard.validate",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "validateMB"})
+        }
+      """
+    )
+  
+    // @LINE:25
+    def socket: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Messageboard.socket",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "messageboardsocket"})
+        }
+      """
+    )
+  
+    // @LINE:27
+    def createUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Messageboard.createUser",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "creatUserMB"})
+        }
+      """
+    )
+  
+    // @LINE:24
+    def mainload: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Messageboard.mainload",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "messageboard"})
+        }
+      """
+    )
+  
+  }
+
+  // @LINE:30
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -18,7 +68,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:21
+    // @LINE:30
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """
@@ -28,12 +78,42 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:22
+    // @LINE:31
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """
         function(file1) {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "versionedAssets/" + (""" + implicitly[play.api.mvc.PathBindable[Asset]].javascriptUnbind + """)("file", file1)})
+        }
+      """
+    )
+  
+  }
+
+  // @LINE:20
+  class ReverseWebSocket(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:21
+    def socket: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.WebSocket.socket",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "CanvasSocket"})
+        }
+      """
+    )
+  
+    // @LINE:20
+    def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.WebSocket.index",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "Canvas"})
         }
       """
     )

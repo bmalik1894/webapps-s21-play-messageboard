@@ -28,24 +28,24 @@ class MessageActor(out: ActorRef, manager:ActorRef) extends Actor {
         var data = ""
         
         var j = 0
+        if (user.messages.length != 0) {
         for (j <- 0 until user.messages.length) {
             data += user.messages{j}.to + "`" 
             data += user.messages(j).from + "`"
             data += user.messages(j).body + "`"
             data += user.messages(j).time + "\n"
-        
-        
+            }
+            data = data.substring(0, data.length - 1)
+            out ! data
         }
-        data = data.substring(0, data.length - 1)
-        out ! data
     }
 
-    def sendOutUsers(users:Array[MessageManager.User]) {
+    def sendOutUsers(users:Array[MessageManager.User]) = {
         var data = "CurrUserlist:"
         for (user <- users) {
             data += user.name + ","
         }
-         data = data.substring(0, data.length - 1)
+        data = data.substring(0, data.length - 1)
         out ! data
     }
 }

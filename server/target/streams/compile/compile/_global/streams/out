@@ -1,11 +1,16 @@
-[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/target/scala-2.13/twirl/main/views/html/login.template.scala:50:80: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : (String, String)[0m
-[0m[[0m[31merror[0m] [0m[0m required: (Symbol, Any)[0m
-[0m[[0m[31merror[0m] [0m[0m		"""),_display_(/*26.4*/helper/*26.10*/.inputText(loginForm("Username"), "id" -> "inputusername")),format.raw/*26.68*/("""[0m
-[0m[[0m[31merror[0m] [0m[0m		                                                                             ^[0m
-[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/target/scala-2.13/twirl/main/views/html/login.template.scala:51:84: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : (String, String)[0m
-[0m[[0m[31merror[0m] [0m[0m required: (Symbol, Any)[0m
-[0m[[0m[31merror[0m] [0m[0m		"""),_display_(/*27.4*/helper/*27.10*/.inputPassword(loginForm("Password"), "id" -> "inputpass")),format.raw/*27.68*/("""[0m
-[0m[[0m[31merror[0m] [0m[0m		                                                                                 ^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[33mwarn[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/controllers/Application.scala:46:19: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method bindFromRequest,[0m
+[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
+[0m[[0m[33mwarn[0m] [0m[0m        loginForm.bindFromRequest.fold([0m
+[0m[[0m[33mwarn[0m] [0m[0m                  ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/controllers/Application.scala:70:15: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method bindFromRequest,[0m
+[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
+[0m[[0m[33mwarn[0m] [0m[0m    loginForm.bindFromRequest.fold([0m
+[0m[[0m[33mwarn[0m] [0m[0m              ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/controllers/Messageboard.scala:21:39: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method apply,[0m
+[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
+[0m[[0m[33mwarn[0m] [0m[0m    val manager = system.actorOf(Props[MessageManager], "MessageManager")[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                      ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mthree warnings found[0m
