@@ -80,5 +80,4 @@ object CanvasManager {
     case class RemoveUser(user: ActorRef)
     case class User(reference:ActorRef, name:String, color:String, x:Double, y:Double)
     case class UserActivity(user:ActorRef, direction:String)
-
 }
