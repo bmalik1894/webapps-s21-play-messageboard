@@ -208,6 +208,7 @@ class MessageComponent extends React.Component {
 
   disconnect(e) {
     socket.send("User disconnected.");
+    messages = [];
     this.props.doLogout();
   }
 
