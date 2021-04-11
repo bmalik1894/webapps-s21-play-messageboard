@@ -2,6 +2,7 @@
 
 const socketRoute = document.getElementById("ws-route").value;
 let websock = (location.protocol == "https:") ? socketRoute.replace("http","wss") : socketRoute.replace("http", "ws");
+const socket = new WebSocket(websock);
 let canvas = document.getElementById("canvasId");
 let ctx = canvas.getContext("2d");
 ctx.font = "20px Arial";

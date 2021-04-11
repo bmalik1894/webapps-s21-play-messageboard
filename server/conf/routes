@@ -26,6 +26,7 @@ GET         /messageboardsocket             controllers.Messageboard.socket
 POST        /validateMB                     controllers.Messageboard.validate
 POST        /creatUserMB                    controllers.Messageboard.createUser
 
+
 # Prefix must match `play.assets.urlPrefix`
 GET        /assets/*file                 controllers.Assets.at(file)
 GET        /versionedAssets/*file        controllers.Assets.versioned(path="/public", file: Asset)
