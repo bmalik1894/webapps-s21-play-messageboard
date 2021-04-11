@@ -1,0 +1,19 @@
+@()(implicit request: RequestHeader, flash: Flash)
+
+@main("Messages") {
+<!DOCTYPE html>
+
+<html>
+  <body style="background-color:rgba(161, 110, 209, .7)">
+    <input type="hidden" id="csrfToken" value="@helper.CSRF.getToken.value">
+    <input type="hidden" id="validateUserRoute" value="@routes.Messageboard.validate()">
+    <input type="hidden" id="createUserRoute" value="@routes.Messageboard.createUser()">
+    <input type="hidden" id="ws-route" value="@routes.Messageboard.socket().absoluteURL()">
+    <div id="maindiv"></div>
+  </body>
+
+  <script src="@routes.Assets.versioned("javascript/messageboard.js")"></script>
+  <script src="https://unpkg.com/react@@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@@16/umd/react-dom.development.js" crossorigin></script>
+</html>
+}

@@ -16,6 +16,15 @@ POST	    /deleteTask1				  controllers.Application.deleteTask
 POST        /sendMessage                  controllers.Application.sendMessage
 POST        /deleteMessage                controllers.Application.deleteMessage
 
+# WebSocket Routes
+GET         /Canvas                         controllers.WebSocket.index
+GET         /CanvasSocket                   controllers.WebSocket.socket
+
+# REACT Messageboard Routes
+GET         /messageboard                   controllers.Messageboard.mainload
+GET         /messageboardsocket             controllers.Messageboard.socket         
+POST        /validateMB                     controllers.Messageboard.validate
+POST        /creatUserMB                    controllers.Messageboard.createUser
 
 # Prefix must match `play.assets.urlPrefix`
 GET        /assets/*file                 controllers.Assets.at(file)
