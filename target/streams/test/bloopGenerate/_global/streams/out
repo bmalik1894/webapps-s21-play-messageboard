@@ -1,0 +1,4 @@
+[debug] [webapps-s21-play-messageboard-test] Classpath dependencies List()
+[debug] [webapps-s21-play-messageboard-test] Dependencies from configurations List(webapps-s21-play-messageboard)
+[debug] Bloop wrote the configuration of project 'webapps-s21-play-messageboard-test' to '/users/bmalik/github/webapps/webapps-s21-play-messageboard/.bloop/webapps-s21-play-messageboard-test.json'
+[success] Generated .bloop/webapps-s21-play-messageboard-test.json

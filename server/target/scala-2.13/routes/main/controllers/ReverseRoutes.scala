@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/conf/routes
-// @DATE:Sat Apr 10 20:10:38 CDT 2021
+// @DATE:Thu Apr 22 11:04:58 CDT 2021
 
 import play.api.mvc.Call
 
@@ -10,56 +10,74 @@ import _root_.controllers.Assets.Asset
 // @LINE:6
 package controllers {
 
-  // @LINE:24
-  class ReverseMessageboard(_prefix: => String) {
-    def _defaultPrefix: String = {
-      if (_prefix.endsWith("/")) "" else "/"
-    }
-
-  
-    // @LINE:26
-    def validate(): Call = {
-      
-      Call("POST", _prefix + { _defaultPrefix } + "validateMB")
-    }
-  
-    // @LINE:25
-    def socket(): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "messageboardsocket")
-    }
-  
-    // @LINE:27
-    def createUser(): Call = {
-      
-      Call("POST", _prefix + { _defaultPrefix } + "creatUserMB")
-    }
-  
-    // @LINE:24
-    def mainload(): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "messageboard")
-    }
-  
-  }
-
-  // @LINE:30
+  // @LINE:39
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:30
+    // @LINE:39
     def at(file:String): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[String]].unbind("file", file))
     }
   
-    // @LINE:31
+    // @LINE:40
     def versioned(file:Asset): Call = {
       implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"))); _rrc
       Call("GET", _prefix + { _defaultPrefix } + "versionedAssets/" + implicitly[play.api.mvc.PathBindable[Asset]].unbind("file", file))
+    }
+  
+  }
+
+  // @LINE:30
+  class ReverseMessageboarddb(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:33
+    def sendMessage(): Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "sendMessageDB")
+    }
+  
+    // @LINE:35
+    def messageList(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "messageListDB")
+    }
+  
+    // @LINE:32
+    def createUser(): Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "createDB")
+    }
+  
+    // @LINE:34
+    def getUsers(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "userListDB")
+    }
+  
+    // @LINE:30
+    def mainload(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "messageboardDB")
+    }
+  
+    // @LINE:36
+    def logout(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "logoutDB")
+    }
+  
+    // @LINE:31
+    def validate(): Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "validateDB")
     }
   
   }
@@ -164,6 +182,39 @@ package controllers {
       
       }
     
+    }
+  
+  }
+
+  // @LINE:24
+  class ReverseMessageboard(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:26
+    def validate(): Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "validateMB")
+    }
+  
+    // @LINE:25
+    def socket(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "messageboardsocket")
+    }
+  
+    // @LINE:27
+    def createUser(): Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "creatUserMB")
+    }
+  
+    // @LINE:24
+    def mainload(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "messageboard")
     }
   
   }

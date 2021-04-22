@@ -59,8 +59,8 @@ Seq[Any](format.raw/*2.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: 2021-03-30T16:43:37.590237
-                  SOURCE: /users/bmalik/github/webapps/web-tasks-s21-bmalik1894/server/app/views/main.scala.html
+                  DATE: 2021-04-19T09:52:49.480083
+                  SOURCE: /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/views/main.scala.html
                   HASH: fea56e9df21db4c0e2249145e4b2858a01add94a
                   MATRIX: 739->1|886->55|913->56|984->101|1009->106|1093->164|1107->170|1168->211|1251->268|1265->274|1325->313|1604->568|1618->573|1652->586|1683->591|1697->596|1733->611|1765->617|1793->624|1827->762|1857->765
                   LINES: 21->1|26->2|27->3|31->7|31->7|32->8|32->8|32->8|33->9|33->9|33->9|40->16|40->16|40->16|41->17|41->17|41->17|42->18|42->18|43->19|44->20

@@ -1,0 +1,4 @@
+[debug] [client] Classpath dependencies List(sharedJS)
+[debug] [client] Dependencies from configurations List()
+[debug] Bloop wrote the configuration of project 'client' to '/users/bmalik/github/webapps/webapps-s21-play-messageboard/.bloop/client.json'
+[success] Generated .bloop/client.json

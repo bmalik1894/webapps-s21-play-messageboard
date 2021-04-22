@@ -1,0 +1,21 @@
+@()(implicit request: RequestHeader, flash: Flash)
+
+@main("Messages") {
+<!DOCTYPE html>
+
+<html>
+  <body style="background-color:rgba(161, 110, 209, .7)">
+    <input type="hidden" id="csrfToken" value="@helper.CSRF.getToken.value">
+    <input type="hidden" id="validateUserRoute" value="@routes.Messageboarddb.validate()">
+    <input type="hidden" id="createUserRoute" value="@routes.Messageboarddb.createUser()">
+    <input type="hidden" id="listUsersRoute" value="@routes.Messageboarddb.createUser()">
+    <input type="hidden" id="sendRoute" value="@routes.Messageboarddb.sendMessage()">
+    <input type="hidden" id="getMessagesRoute" value="@routes.Messageboarddb.messageList()">
+    <div id="maindiv"></div>
+  </body>
+
+  <script src="@routes.Assets.versioned("javascript/mbdb.js")"></script>
+  <script src="https://unpkg.com/react@@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@@16/umd/react-dom.development.js" crossorigin></script>
+</html>
+}

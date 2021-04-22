@@ -151,7 +151,6 @@ class MessageComponent extends React.Component {
     socket.send("New user connected:" + thisUser);
     socket.send("GET MESSAGES.");
     this.requestUsers();
-    console.log("loaded messages");
   }
 
   render() {
@@ -196,7 +195,6 @@ class MessageComponent extends React.Component {
         let puredata = selfmessages[i].split("`"); 
         let newmsg = new Message(puredata[2], puredata[0], puredata[1], puredata[3]);
         if (!messageAlreadyExists(newmsg)) {
-          console.log("pushing new message");
           messages.push(newmsg);
           this.loadMessages()
         } 
@@ -210,12 +208,12 @@ class MessageComponent extends React.Component {
 
   disconnect(e) {
     socket.send("User disconnected.");
+    messages = [];
     this.props.doLogout();
   }
 
   setTarget(e) {
     this.setState({toUser: e.target.value});
-    console.log("toUser = " + this.state.toUser)
     document.getElementById("userDropDown").value = this.state.toUser;
     document.getElementById("userDropDown").text = this.state.toUser;
   }

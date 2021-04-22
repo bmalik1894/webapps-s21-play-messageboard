@@ -1,15 +1,1 @@
-[0m[[0m[0mdebug[0m] [0m[0mPackaging /users/bmalik/github/webapps/webapps-s21-play-messageboard/shared/.jvm/target/scala-2.13/play-shared_2.13-0.1.0-SNAPSHOT.jar ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	edu[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /users/bmalik/github/webapps/webapps-s21-play-messageboard/shared/.jvm/target/scala-2.13/classes/edu[0m
-[0m[[0m[0mdebug[0m] [0m[0m	edu/trinity[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /users/bmalik/github/webapps/webapps-s21-play-messageboard/shared/.jvm/target/scala-2.13/classes/edu/trinity[0m
-[0m[[0m[0mdebug[0m] [0m[0m	edu/trinity/videoquizreact[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /users/bmalik/github/webapps/webapps-s21-play-messageboard/shared/.jvm/target/scala-2.13/classes/edu/trinity/videoquizreact[0m
-[0m[[0m[0mdebug[0m] [0m[0m	edu/trinity/videoquizreact/shared[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /users/bmalik/github/webapps/webapps-s21-play-messageboard/shared/.jvm/target/scala-2.13/classes/edu/trinity/videoquizreact/shared[0m
-[0m[[0m[0mdebug[0m] [0m[0m	edu/trinity/videoquizreact/shared/SharedMessages$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /users/bmalik/github/webapps/webapps-s21-play-messageboard/shared/.jvm/target/scala-2.13/classes/edu/trinity/videoquizreact/shared/SharedMessages$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	edu/trinity/videoquizreact/shared/SharedMessages.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /users/bmalik/github/webapps/webapps-s21-play-messageboard/shared/.jvm/target/scala-2.13/classes/edu/trinity/videoquizreact/shared/SharedMessages.class[0m
-[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
+[0m[[0m[0mdebug[0m] [0m[0mJar uptodate: /users/bmalik/github/webapps/webapps-s21-play-messageboard/shared/.jvm/target/scala-2.13/play-shared_2.13-0.1.0-SNAPSHOT.jar[0m
