@@ -20,8 +20,8 @@ const csrfToken = document.getElementById("csrfToken").value;
 const validateRoute = document.getElementById("validateUserRoute").value;
 const createRoute = document.getElementById("createUserRoute").value;
 function assignUsername(uname) {thisUser = uname;}
-function populateUserList(data) {
-  let users = data.replace("CurrUserlist:", "").split(",");
+function populateUserList() {
+  fetch(listUsersRoute).then(res => res.json()).then(users)
   let userdropdown = document.getElementById("userDropDown");
   var index = 0;
   for (var user of users) {
@@ -144,7 +144,7 @@ class MessageComponent extends React.Component {
   }
 
   componentDidMount() {    
-    this.requestUsers();
+    populateUserList();
     this.loadMessages2();
   }
 
@@ -172,17 +172,6 @@ class MessageComponent extends React.Component {
     );
   }
   //////////////////////////////////////////////////////////
-
-
-
-  handleEvents(data) {
-        if (data.includes("CurrUserlist:")) {
-            populateUserList(data);
-        } else {
-            this.parseAndPipe(data);
-        }
-    }
-  
     
     
   parseAndPipe(data) {
@@ -226,6 +215,7 @@ class MessageComponent extends React.Component {
 
   loadMessages2() {
     fetch(getMessagesRoute).then(res => res.json()).then(messages => this.setState({messages}))
+    console.log(this.state.messages)
     //if(this.state.messages.length != 0) {
     //  for (var j = 0; j < this.state.messages.length; j++ ) {
     //    j = j;
