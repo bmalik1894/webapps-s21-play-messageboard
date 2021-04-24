@@ -1,4 +1,4 @@
-[0m[[0m[33mwarn[0m] [0m[0mjackson-core-2.10.5.jar no longer exists at /users/bmalik/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.10.5/jackson-core-2.10.5.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0mnot up to date. inChanged = false, force = false[0m
-[0m[[0m[0mdebug[0m] [0m[0mUpdating sharedJVM...[0m
-[0m[[0m[0mdebug[0m] [0m[0mDone updating sharedJVM[0m
+[warn] jackson-core-2.10.5.jar no longer exists at /users/bmalik/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.10.5/jackson-core-2.10.5.jar
+[debug] not up to date. inChanged = false, force = false
+[debug] Updating sharedJVM...
+[debug] Done updating sharedJVM
