@@ -1,6 +1,7 @@
 "use strict"
 
 let thisUser = "";
+let users = "";
 
 class Message {
     constructor (body, target, from, time) {
@@ -21,7 +22,8 @@ const validateRoute = document.getElementById("validateUserRoute").value;
 const createRoute = document.getElementById("createUserRoute").value;
 function assignUsername(uname) {thisUser = uname;}
 function populateUserList() {
-  fetch(listUsersRoute).then(res => res.json()).then(users)
+  fetch(listUsersRoute).then(res => res.json()).then(users);
+  console.log(users);
   let userdropdown = document.getElementById("userDropDown");
   var index = 0;
   for (var user of users) {
@@ -143,7 +145,8 @@ class MessageComponent extends React.Component {
     this.state = { messages: [], users:[], newMessage: "", taskMessage: "", toUser: "Everyone"};
   }
 
-  componentDidMount() {    
+  componentDidMount() {
+    console.log("Mounting Message Component.");
     populateUserList();
     this.loadMessages2();
   }
@@ -228,7 +231,7 @@ class MessageComponent extends React.Component {
       body: JSON.stringify(this.state.newMessage)
     }).then(res => res.json()).then( data => {
       if(data) {
-        this.loadMessages();
+        this.loadMessages2();
         this.setState({ taskMessage: "", newMessage: ""});
       } else {
         this.setState({taskMessage:"Failed to Send."}); 
