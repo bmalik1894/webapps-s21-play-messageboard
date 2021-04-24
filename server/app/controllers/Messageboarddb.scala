@@ -66,8 +66,9 @@ class Messageboarddb @Inject()(protected val dbConfigProvider: DatabaseConfigPro
             .withSession("username" -> ud.username, "userid" -> userid.toString, "csrfToken" -> play.filters.csrf.CSRF.getToken.map(_.value).getOrElse(""))
         case None =>
           Ok(Json.toJson(false))
-      }
-    } }
+        }
+      } 
+    }
   }
 
     def sendMessage = Action.async { implicit request =>

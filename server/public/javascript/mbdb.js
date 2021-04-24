@@ -171,25 +171,8 @@ class MessageComponent extends React.Component {
       ce('button', { onClick: e => this.disconnect(e) }, 'Log out')
     );
   }
-  //////////////////////////////////////////////////////////
-    
-    
-  parseAndPipe(data) {
-      let selfmessages = data.split("\n");
-      for (var i = 0; i < selfmessages.length; i++) {
-        let puredata = selfmessages[i].split("`"); 
-        let newmsg = new Message(puredata[2], puredata[0], puredata[1], puredata[3]);
-        if (!messageAlreadyExists(newmsg)) {
-          messages.push(newmsg);
-          this.loadMessages()
-        } 
-      }
-    }
 
   ///////////////////////////////////////////////////////////////////////////
-  requestUsers(e) {
-    fetch(listUsersRoute).then(res => res.json()).then(this.user)
-  }
 
   disconnect(e) {
     this.props.doLogout();
@@ -214,13 +197,12 @@ class MessageComponent extends React.Component {
   }
 
   loadMessages2() {
-    fetch(getMessagesRoute).then(res => res.json()).then(messages => this.setState({messages}))
-    console.log(this.state.messages)
-    //if(this.state.messages.length != 0) {
-    //  for (var j = 0; j < this.state.messages.length; j++ ) {
-    //    j = j;
-    //  }
-    //}
+    const username = this.state.username;
+    fetch(getMessagesRoute, { 
+      method: 'POST',
+      headers: {'Content-Type': 'application/json', 'Csrf-Token': csrfToken },
+      body: username}).then(res => res.json()).then(messages => this.setState({messages}))
+      console.log(this.state.messages);
 
     if (this.state.messages.length == 0) {
       document.getElementById("messageArea").value = "No messages yet.";
