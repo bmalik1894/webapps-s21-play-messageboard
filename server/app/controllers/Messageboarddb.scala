@@ -25,7 +25,7 @@ class Messageboarddb @Inject()(protected val dbConfigProvider: DatabaseConfigPro
     implicit val messageItemWrites = Json.writes[MessageItem]
     
     def mainload = Action { implicit request =>
-        Ok(views.html.successWebSock())
+        Ok(views.html.messagedb())
     }
 
     def withJsonBody[A](f: A => Future[Result])(implicit request: Request[AnyContent], reads: Reads[A]):Future[Result] = {
