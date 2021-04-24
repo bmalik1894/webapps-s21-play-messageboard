@@ -32,7 +32,7 @@ class DatabaseModel(db:Database)(implicit ec: ExecutionContext) {
     }
 
     def validateUser(username: String, password:String): Future[Option[Int]] = {
-        val matches = db.run(Users.filter(userRow => userRow.username === username && userRow.password === password).result)
+        val matches = db.run(Users.filter(userRow => userRow.username === username).result)
         matches.map(userRows => userRows.headOption.flatMap {
             userRows => if (BCrypt.checkpw(password, userRows.password)) Some(userRows.id) else None 
         })
