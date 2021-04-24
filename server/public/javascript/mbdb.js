@@ -1,7 +1,7 @@
 "use strict"
 
 let thisUser = "";
-let users = "";
+let users = [];
 
 class Message {
     constructor (body, target, from, time) {
@@ -159,7 +159,7 @@ class MessageComponent extends React.Component {
       ce('br'),
       ce('div', null,
         ce('input', {type: 'text', value: this.state.newMessage, onChange: e => this.handleChange(e) }),
-        ce('select', {onClick: e => this.requestUsers(e), onChange: e => this.setTarget(e), id:"userDropDown"}, 
+        ce('select', {onClick: e => populateUserList(), onChange: e => this.setTarget(e), id:"userDropDown"}, 
             ce('option', {value: "Everyone"}, "Everyone")
         ),
         ce('button', {onClick: e => this.handleSendClick(e)}, 'Send Message'),
@@ -201,10 +201,7 @@ class MessageComponent extends React.Component {
 
   loadMessages2() {
     const username = this.state.username;
-    fetch(getMessagesRoute, { 
-      method: 'POST',
-      headers: {'Content-Type': 'application/json', 'Csrf-Token': csrfToken },
-      body: username}).then(res => res.json()).then(messages => this.setState({messages}))
+    fetch(getMessagesRoute).then(res => res.json()).then(messages => this.setState({messages}))
       console.log(this.state.messages);
 
     if (this.state.messages.length == 0) {

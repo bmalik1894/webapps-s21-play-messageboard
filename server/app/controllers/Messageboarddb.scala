@@ -32,9 +32,9 @@ class Messageboarddb @Inject()(protected val dbConfigProvider: DatabaseConfigPro
     request.body.asJson.map { body =>
       Json.fromJson[A](body) match {
         case JsSuccess(a, path) => f(a)
-        case e @ JsError(_) => Future.successful(Redirect(routes.Messageboard.mainload()))
+        case e @ JsError(_) => Future.successful(Redirect(routes.Messageboarddb.mainload()))
         }
-      }.getOrElse(Future.successful(Redirect(routes.Messageboard.mainload())))
+      }.getOrElse(Future.successful(Redirect(routes.Messageboarddb.mainload())))
     }
 
     def withSessionUsername(f: String => Future[Result])(implicit request: Request[AnyContent]): Future[Result] = {
@@ -73,8 +73,8 @@ class Messageboarddb @Inject()(protected val dbConfigProvider: DatabaseConfigPro
 
     def sendMessage = Action.async { implicit request =>
       withSessionUserID { userid =>
-        withJsonBody[String] { message =>
-        model.sendMessage(userid, "Everyone", message).map(bool => Ok(Json.toJson(bool)))
+        withJsonBody[Seq[String]] { ud =>
+        model.sendMessage(userid, ud[0], ud[1]).map(bool => Ok(Json.toJson(bool)))
         }
       }
     }

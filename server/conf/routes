@@ -32,7 +32,7 @@ POST        /validateDB                     controllers.Messageboarddb.validate
 POST        /createDB                       controllers.Messageboarddb.createUser
 POST        /sendMessageDB                  controllers.Messageboarddb.sendMessage
 GET         /userListDB                     controllers.Messageboarddb.getUsers
-POST        /messageListDB                  controllers.Messageboarddb.messageList
+GET         /messageListDB                  controllers.Messageboarddb.messageList
 GET         /logoutDB                       controllers.Messageboarddb.logout
 
 # Prefix must match `play.assets.urlPrefix`
