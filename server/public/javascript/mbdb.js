@@ -225,7 +225,7 @@ class MessageComponent extends React.Component {
     fetch (sendRoute, {
       method: 'POST',
       headers: {'Content-Type': 'application/json', 'Csrf-Token': csrfToken},
-      body: JSON.stringify(this.state.newMessage)
+      body: JSON.stringify(thisUser, this.state.toUser, this.state.newMessage)
     }).then(res => res.json()).then( data => {
       if(data) {
         this.loadMessages2();

@@ -21,7 +21,9 @@ class Messageboarddb @Inject()(protected val dbConfigProvider: DatabaseConfigPro
 
     private val model = new DatabaseModel(db)
     
+
     implicit val userDataReads = Json.reads[UserData]
+    implicit val userSendReads = Json.reads[UserSend]
     implicit val messageItemWrites = Json.writes[MessageItem]
     
     def mainload = Action { implicit request =>
@@ -73,8 +75,8 @@ class Messageboarddb @Inject()(protected val dbConfigProvider: DatabaseConfigPro
 
     def sendMessage = Action.async { implicit request =>
       withSessionUserID { userid =>
-        withJsonBody[Seq[String]] { ud =>
-        model.sendMessage(userid, ud[0], ud[1]).map(bool => Ok(Json.toJson(bool)))
+        withJsonBody[UserSend] { ud =>
+        model.sendMessage(userid, ud.toUser, ud.body).map(bool => Ok(Json.toJson(bool)))
         }
       }
     }
