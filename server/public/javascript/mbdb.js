@@ -174,7 +174,7 @@ class MessageComponent extends React.Component {
   }
 
   populateUserList() {
-    fetch(listUsersRoute).then(res => res.json()).then(users => this.setState(users));
+    fetch(listUsersRoute).then(res => res.json()).then(data => this.setState({users: data}));
     console.log(this.state.users);
     let userdropdown = document.getElementById("userDropDown");
     var index = 0;
