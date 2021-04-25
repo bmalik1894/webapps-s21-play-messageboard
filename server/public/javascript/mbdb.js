@@ -175,7 +175,7 @@ class MessageComponent extends React.Component {
 
   populateUserList() {
     fetch(listUsersRoute).then(res => res.json()).then(users => this.setState(users));
-    console.log(users);
+    console.log(this.state.users);
     let userdropdown = document.getElementById("userDropDown");
     var index = 0;
     for (var user of this.state.users) {
@@ -186,18 +186,6 @@ class MessageComponent extends React.Component {
         userdropdown.add(newopt, userdropdown[index]);
         index++;
       }
-    }
-  }
-
-  loadMessages() {
-    if (messages.length != 0) {
-      let textarea = document.getElementById("messageArea");
-      textarea.value = "";
-      for (var i = 0; i < messages.length; i++) {
-        textarea.value += messages[i].from + " (to " + messages[i].to+ "): " + messages[i].body + "\n"; 
-      }
-    } else {
-      document.getElementById("messageArea").text += "No messages yet.";
     }
   }
 
