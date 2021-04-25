@@ -21,21 +21,7 @@ const csrfToken = document.getElementById("csrfToken").value;
 const validateRoute = document.getElementById("validateUserRoute").value;
 const createRoute = document.getElementById("createUserRoute").value;
 function assignUsername(uname) {thisUser = uname;}
-function populateUserList() {
-  fetch(listUsersRoute).then(res => res.json()).then(users);
-  console.log(users);
-  let userdropdown = document.getElementById("userDropDown");
-  var index = 0;
-  for (var user of users) {
-    if (userdropdown.innerHTML.indexOf('value="' + user + '"') == -1 && user != thisUser) {
-    let newopt = document.createElement("option");
-      newopt.value = user;
-      newopt.text = user;
-      userdropdown.add(newopt, userdropdown[index]);
-      index++;
-    }
-  }
-}
+
 function messageAlreadyExists(newmsg) {
   if (messages.length != 0) {
     for (var i = 0; i < messages.length; i++) {
@@ -147,7 +133,7 @@ class MessageComponent extends React.Component {
 
   componentDidMount() {
     console.log("Mounting Message Component.");
-    populateUserList();
+    this.populateUserList();
     this.loadMessages2();
   }
 
@@ -185,6 +171,22 @@ class MessageComponent extends React.Component {
     this.setState({toUser: e.target.value});
     document.getElementById("userDropDown").value = this.state.toUser;
     document.getElementById("userDropDown").text = this.state.toUser;
+  }
+
+  populateUserList() {
+    fetch(listUsersRoute).then(res => res.json()).then(users => this.setState(users));
+    console.log(users);
+    let userdropdown = document.getElementById("userDropDown");
+    var index = 0;
+    for (var user of this.state.users) {
+      if (userdropdown.innerHTML.indexOf('value="' + user + '"') == -1 && user != thisUser) {
+      let newopt = document.createElement("option");
+        newopt.value = user;
+        newopt.text = user;
+        userdropdown.add(newopt, userdropdown[index]);
+        index++;
+      }
+    }
   }
 
   loadMessages() {

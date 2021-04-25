@@ -1,25 +1,25 @@
 [0m[[0m[0minfo[0m] [0m[0mFast optimizing /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/play-client-fastopt[0m
-[0m[[0m[0mdebug[0m] [0m[0mLinker: Compute reachability: 375686 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mLinker: Assemble LinkedClasses: 76393 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mLinker: 552284 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mLinker: Compute reachability: 449162 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mLinker: Assemble LinkedClasses: 41221 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mLinker: 565967 us[0m
 [0m[[0m[0mdebug[0m] [0m[0mOptimizer: Batch mode: true[0m
-[0m[[0m[0mdebug[0m] [0m[0mOptimizer: Incremental part: 142827 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mOptimizer: Incremental part: 245539 us[0m
 [0m[[0m[0mdebug[0m] [0m[0mOptimizer: Optimizing 908 methods.[0m
-[0m[[0m[0mdebug[0m] [0m[0mOptimizer: Optimizer part: 366899 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mOptimizer: 517196 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mRefiner: Compute reachability: 42454 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mRefiner: Assemble LinkedClasses: 5375 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mRefiner: 60439 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mModule Splitter: Calculate Dependency Info: 3143 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mModule Splitter: Analyze Modules: 868 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mModule Splitter: Assemble Modules: 7768 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mModule Splitter: 13600 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mEmitter: Generate Classes: 317258 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mEmitter: Write trees: 38944 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mOptimizer: Optimizer part: 458071 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mOptimizer: 710624 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: Compute reachability: 69217 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: Assemble LinkedClasses: 4610 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: 88522 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mModule Splitter: Calculate Dependency Info: 3096 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mModule Splitter: Analyze Modules: 884 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mModule Splitter: Assemble Modules: 7447 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mModule Splitter: 13123 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: Generate Classes: 321808 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: Write trees: 35757 us[0m
 [0m[[0m[0mdebug[0m] [0m[0mEmitter: The set of dangerous global refs has changed. Going to re-generate the world.[0m
-[0m[[0m[0mdebug[0m] [0m[0mEmitter: Generate Classes: 109036 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mEmitter: Write trees: 5135 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: Generate Classes: 104318 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: Write trees: 4227 us[0m
 [0m[[0m[0mdebug[0m] [0m[0mEmitter: Class tree cache stats: reused: 0 -- invalidated: 434[0m
 [0m[[0m[0mdebug[0m] [0m[0mEmitter: Method tree cache stats: reused: 0 -- invalidated: 876[0m
-[0m[[0m[0mdebug[0m] [0m[0mEmitter: 501926 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mBasicBackend: Write result: 158918 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: 495577 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mBasicBackend: Write result: 148224 us[0m
