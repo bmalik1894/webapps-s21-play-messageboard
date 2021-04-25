@@ -145,7 +145,7 @@ class MessageComponent extends React.Component {
       ce('br'),
       ce('div', null,
         ce('input', {type: 'text', value: this.state.newMessage, onChange: e => this.handleChange(e) }),
-        ce('select', {onClick: e => populateUserList(), onChange: e => this.setTarget(e), id:"userDropDown"}, 
+        ce('select', {onClick: e => this.populateUserList(), onChange: e => this.setTarget(e), id:"userDropDown"}, 
             ce('option', {value: "Everyone"}, "Everyone")
         ),
         ce('button', {onClick: e => this.handleSendClick(e)}, 'Send Message'),
