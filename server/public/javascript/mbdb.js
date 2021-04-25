@@ -1,7 +1,6 @@
 "use strict"
 
 let thisUser = "";
-let users = [];
 
 class Message {
     constructor (body, target, from, time) {
@@ -128,7 +127,7 @@ class LoginComponent extends React.Component {
 class MessageComponent extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { messages: [], users:[], newMessage: "", taskMessage: "", toUser: "Everyone"};
+    this.state = { messages: [], users: [], newMessage: "", taskMessage: "", toUser: "Everyone"};
   }
 
   componentDidMount() {
@@ -174,8 +173,9 @@ class MessageComponent extends React.Component {
   }
 
   populateUserList() {
+    console.log("right before users change.")
     fetch(listUsersRoute).then(res => res.json()).then(users => this.setState({users}));
-    console.log(this.state.users);
+    console.log("users = " + this.state.users);
     let userdropdown = document.getElementById("userDropDown");
     var index = 0;
     for (var user of this.state.users) {
@@ -211,11 +211,10 @@ class MessageComponent extends React.Component {
 
   handleSendClick(e) {
     if (this.state.newMessage.length != 0) {
-    let msg = "NewMessage`" + thisUser + "`" +  this.state.toUser + "`" + this.state.newMessage;
     fetch (sendRoute, {
       method: 'POST',
       headers: {'Content-Type': 'application/json', 'Csrf-Token': csrfToken},
-      body: JSON.stringify(thisUser, this.state.toUser, this.state.newMessage)
+      body: JSON.stringify(thisUser, this.state.toUser, this.state.newMessage, "00:00")
     }).then(res => res.json()).then( data => {
       if(data) {
         this.loadMessages2();
