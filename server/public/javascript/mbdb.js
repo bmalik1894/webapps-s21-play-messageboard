@@ -203,7 +203,7 @@ class MessageComponent extends React.Component {
   }
 
   fetchMessages() {
-    fetch(getMessagesRoute.value).then(res => res.json()).then(messages => this.setState({messages}))
+    await fetch(getMessagesRoute.value).then(res => res.json()).then(messages => this.setState({messages}))
   }
 
   loadMessages2() {
@@ -237,6 +237,7 @@ class MessageComponent extends React.Component {
     }).then(res => res.json()).then( data => {
       if(data) {
         this.setState({ messages:data, taskMessage: "", newMessage: ""});
+        console.log(this.state.messages);
         this.loadMessages2();
       } else {
         this.setState({taskMessage:"Failed to Send."}); 
