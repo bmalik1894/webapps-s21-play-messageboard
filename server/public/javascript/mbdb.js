@@ -148,7 +148,7 @@ class MessageComponent extends React.Component {
 
   componentDidMount() {
     console.log("Mounting Message Component.");
-    this.populateUserList();
+    this.fetchUsers();
     this.loadMessages2();
   }
 
@@ -160,7 +160,7 @@ class MessageComponent extends React.Component {
       ce('br'),
       ce('div', null,
         ce('input', {type: 'text', value: this.state.newMessage, onChange: e => this.handleChange(e) }),
-        ce('select', {onClick: e => this.populateUserList(), onChange: e => this.setTarget(e), id:"userDropDown"}, 
+        ce('select', {onClick: e => this.fetchUsers(), onChange: e => this.setTarget(e), id:"userDropDown"}, 
             ce('option', {value: "Everyone"}, "Everyone")
         ),
         ce('button', {onClick: e => this.handleSendClick(e)}, 'Send Message'),
@@ -191,13 +191,10 @@ class MessageComponent extends React.Component {
 
   fetchUsers() {
     fetch(listUsersRoute).then(res => res.json()).then(users => this.setState({users}));
-    let userlist = fetch(listUsersRoute).them(res => res.json());
-    console.log(userlist);
+    this.populateUserList();
   }
 
   populateUserList() {
-    console.log("right before users change.")
-    this.fetchUsers();
     console.log("users = " + this.state.users);
     let userdropdown = document.getElementById("userDropDown");
     var index = 0;
