@@ -229,10 +229,11 @@ class MessageComponent extends React.Component {
     if (this.state.newMessage.length != 0) {
     let target = this.state.toUser;
     let targetMessage = this.state.newMessage;
+    let parseme = target + "`" + targetMessage;
     fetch (sendRoute.value, {
       method: 'POST',
       headers: {'Content-Type': 'application/json', 'Csrf-Token': csrfToken},
-      body: JSON.stringify({thisUser, target, targetMessage, "00:00"})
+      body: JSON.stringify({parseme})
     }).then(res => res.json()).then( data => {
       if(data) {
         this.loadMessages2();
