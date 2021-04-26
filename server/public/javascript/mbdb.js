@@ -172,9 +172,14 @@ class MessageComponent extends React.Component {
     document.getElementById("userDropDown").text = this.state.toUser;
   }
 
+
+  fetchUsers() {
+    fetch(listUsersRoute).then(res => res.json()).then(users => this.setState({users}));
+  }
+
   populateUserList() {
     console.log("right before users change.")
-    fetch(listUsersRoute).then(res => res.json()).then(users => this.setState({users}));
+    this.fetchUsers();
     console.log("users = " + this.state.users);
     let userdropdown = document.getElementById("userDropDown");
     var index = 0;
@@ -189,10 +194,14 @@ class MessageComponent extends React.Component {
     }
   }
 
+  fetchMessages() {
+    fetch(getMessagesRoute).then(res => res.json()).then(messages => this.setState({messages}))
+  }
+
   loadMessages2() {
     const username = this.state.username;
-    fetch(getMessagesRoute).then(res => res.json()).then(messages => this.setState({messages}))
-      console.log(this.state.messages);
+    this.fetchMessages();
+    console.log(this.state.messages);
 
     if (this.state.messages.length == 0) {
       document.getElementById("messageArea").value = "No messages yet.";
