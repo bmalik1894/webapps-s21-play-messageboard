@@ -21,7 +21,7 @@ const csrfToken = document.getElementById("csrfToken").value;
 const validateRoute = document.getElementById("validateUserRoute").value;
 const createRoute = document.getElementById("createUserRoute").value;
 function assignUsername(uname) {thisUser = uname;}
-function fetchMessages() {
+async function fetchMessages() {
   await fetch(getMessagesRoute.value).then(res => res.json()).then(messages => globalMessages = messages);
 }
 
