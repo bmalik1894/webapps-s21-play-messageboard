@@ -124,6 +124,22 @@ class LoginComponent extends React.Component {
   }
 }
 
+class UserComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {users: []}
+  }
+
+
+
+  render() {
+    let stuff = ce('select', {onClick: e => this.populateUserList(), onChange: e => this.setTarget(e), id:"userDropDown"}, 
+    ce('option', {value: "Everyone"}, "Everyone"),
+);
+    return stuff
+  }
+}
+
 class MessageComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -175,6 +191,8 @@ class MessageComponent extends React.Component {
 
   fetchUsers() {
     fetch(listUsersRoute).then(res => res.json()).then(users => this.setState({users}));
+    let userlist = fetch(listUsersRoute).them(res => res.json());
+    console.log(userlist);
   }
 
   populateUserList() {
