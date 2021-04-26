@@ -162,7 +162,7 @@ class MessageComponent extends React.Component {
       ce('div', null,
         ce('input', {type: 'text', value: this.state.newMessage, onChange: e => this.handleChange(e) }),
         ce('select', {onClick: e => this.fetchUsers(), onChange: e => this.setTarget(e), id:"userDropDown"}, 
-            ce('option', {value: "Everyone"}, "Everyone")
+            ce('option', {value: "Everyone"}, "Everyone"),
         ),
         ce('button', {onClick: e => this.handleSendClick(e)}, 'Send Message'),
         this.state.taskMessage
@@ -191,7 +191,7 @@ class MessageComponent extends React.Component {
 
 
   fetchUsers() {
-    fetch(listUsersRoute).then(res => res.json()).then(users => this.setState({users}));
+    fetch(listUsersRoute).then(res => console.log(res), res.json()).then(users => this.setState({users}));
   }
 
   populateUserList() {
