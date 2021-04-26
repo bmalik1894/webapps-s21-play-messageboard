@@ -189,7 +189,6 @@ class MessageComponent extends React.Component {
 
   populateUserList() {
     fetch(listUsersRoute.value).then(res => res.json()).then(users => this.setState({users}));
-    console.log("users = " + this.state.users);
     let userdropdown = document.getElementById("userDropDown");
     var index = 0;
     for (var user of this.state.users) {
@@ -211,7 +210,6 @@ class MessageComponent extends React.Component {
     const username = this.state.username;
     this.fetchMessages();
     console.log(this.state.messages);
-
     if (this.state.messages.length == 0) {
       document.getElementById("messageArea").value = "No messages yet.";
     } else {
@@ -234,7 +232,7 @@ class MessageComponent extends React.Component {
     fetch (sendRoute.value, {
       method: 'POST',
       headers: {'Content-Type': 'application/json', 'Csrf-Token': csrfToken},
-      body: JSON.stringify(thisUser, target, targetMessage, "00:00")
+      body: JSON.stringify({thisUser, target, targetMessage, "00:00"})
     }).then(res => res.json()).then( data => {
       if(data) {
         this.loadMessages2();
