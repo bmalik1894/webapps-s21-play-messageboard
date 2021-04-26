@@ -147,8 +147,6 @@ class MessageComponent extends React.Component {
   }
 
   componentDidMount() {
-    console.log("Mounting Message Component.");
-    this.fetchUsers();
     this.populateUserList();
     this.loadMessages2();
   }
@@ -162,7 +160,7 @@ class MessageComponent extends React.Component {
       ce('div', null,
         ce('input', {type: 'text', value: this.state.newMessage, onChange: e => this.handleChange(e) }),
         ce('select', {onClick: e => this.fetchUsers(), onChange: e => this.setTarget(e), id:"userDropDown"}, 
-            ce('option', {value: "Everyone"}, "Everyone"),
+            ce('option', {value: "Everyone"}, "Everyone")
         ),
         ce('button', {onClick: e => this.handleSendClick(e)}, 'Send Message'),
         this.state.taskMessage
@@ -189,12 +187,8 @@ class MessageComponent extends React.Component {
     document.getElementById("userDropDown").text = this.state.toUser;
   }
 
-
-  fetchUsers() {
-    fetch(listUsersRoute).then(res => console.log(res), res.json()).then(users => this.setState({users}));
-  }
-
   populateUserList() {
+    fetch(listUsersRoute.value).then(res => res.json()).then(users => this.setState({users}));
     console.log("users = " + this.state.users);
     let userdropdown = document.getElementById("userDropDown");
     var index = 0;
@@ -210,7 +204,7 @@ class MessageComponent extends React.Component {
   }
 
   fetchMessages() {
-    fetch(getMessagesRoute).then(res => res.json()).then(messages => this.setState({messages}))
+    fetch(getMessagesRoute.value).then(res => res.json()).then(messages => this.setState({messages}))
   }
 
   loadMessages2() {
