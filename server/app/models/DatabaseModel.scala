@@ -66,11 +66,9 @@ class DatabaseModel(db:Database)(implicit ec: ExecutionContext) {
     def sendMessage(userid:Int, target:String, message:String): Future[Boolean] = {
         val datetime = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm").format(LocalDateTime.now())
         var targetid = getIdFromUser(target).getOrElse(-1)
-
         if (targetid != -1) {
             db.run(Messages += MessagesRow(-1, targetid, userid, message, datetime)).map(addCount => addCount > 0)
-        } 
-        else Future.successful(false)
+        } else Future.successful(false)
     }
 
 
@@ -79,11 +77,12 @@ class DatabaseModel(db:Database)(implicit ec: ExecutionContext) {
         db.run(
             (for {
                 user <- Users if user.username === username
-                message <- Messages if message.touser === user.id
+                message <- Messages if message.touser === user.id || message.fromuser === user.id || message.touser === 1
             } yield {
                 message
             }).result
-        ).map(messages => messages.map(message => MessageItem(message.messageId, getUserFromId(message.touser).getOrElse("Unkown"), getUserFromId(message.fromuser).getOrElse("Unkown"), message.body, message.timestamp)))
+        ).map(messages => messages.map(message => MessageItem(message.messageId, getUserFromId(message.touser).getOrElse("Unkown"), 
+                    getUserFromId(message.fromuser).getOrElse("Unkown"), message.body, message.timestamp)))
     }
 
     def removeMessage(messageid:Int): Future[Boolean] = {

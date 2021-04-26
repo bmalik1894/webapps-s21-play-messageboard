@@ -236,8 +236,8 @@ class MessageComponent extends React.Component {
       body: JSON.stringify({parseme})
     }).then(res => res.json()).then( data => {
       if(data) {
+        this.setState({ messages:data, taskMessage: "", newMessage: ""});
         this.loadMessages2();
-        this.setState({ taskMessage: "", newMessage: ""});
       } else {
         this.setState({taskMessage:"Failed to Send."}); 
       }
