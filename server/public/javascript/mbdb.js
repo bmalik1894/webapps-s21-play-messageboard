@@ -149,6 +149,7 @@ class MessageComponent extends React.Component {
   componentDidMount() {
     console.log("Mounting Message Component.");
     this.fetchUsers();
+    this.populateUserList();
     this.loadMessages2();
   }
 
@@ -191,7 +192,6 @@ class MessageComponent extends React.Component {
 
   fetchUsers() {
     fetch(listUsersRoute).then(res => res.json()).then(users => this.setState({users}));
-    this.populateUserList();
   }
 
   populateUserList() {
