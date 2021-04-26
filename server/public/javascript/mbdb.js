@@ -22,7 +22,7 @@ const validateRoute = document.getElementById("validateUserRoute").value;
 const createRoute = document.getElementById("createUserRoute").value;
 function assignUsername(uname) {thisUser = uname;}
 function fetchMessages() {
-  await fetch(getMessagesRoute.value).then(res => res.json()).then(messages => globalMessages);
+  await fetch(getMessagesRoute.value).then(res => res.json()).then(messages => globalMessages = messages);
 }
 
 function messageAlreadyExists(newmsg) {
