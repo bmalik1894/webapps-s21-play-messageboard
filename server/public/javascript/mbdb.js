@@ -1,6 +1,7 @@
 "use strict"
 
 let thisUser = "";
+let globalMessages = [];
 
 class Message {
     constructor (body, target, from, time) {
@@ -20,6 +21,9 @@ const csrfToken = document.getElementById("csrfToken").value;
 const validateRoute = document.getElementById("validateUserRoute").value;
 const createRoute = document.getElementById("createUserRoute").value;
 function assignUsername(uname) {thisUser = uname;}
+function fetchMessages() {
+  await fetch(getMessagesRoute.value).then(res => res.json()).then(messages => globalMessages);
+}
 
 function messageAlreadyExists(newmsg) {
   if (messages.length != 0) {
@@ -178,6 +182,7 @@ class MessageComponent extends React.Component {
   ///////////////////////////////////////////////////////////////////////////
 
   disconnect(e) {
+    globalMessages = [];
     this.props.doLogout();
   }
 
@@ -202,13 +207,12 @@ class MessageComponent extends React.Component {
     }
   }
 
-  fetchMessages() {
-    await fetch(getMessagesRoute.value).then(res => res.json()).then(messages => this.setState({messages}))
-  }
+  
 
   loadMessages2() {
     const username = this.state.username;
-    this.fetchMessages();
+    fetchMessages();
+    this.setState({messages:globalMessages});
     console.log(this.state.messages);
     if (this.state.messages.length == 0) {
       document.getElementById("messageArea").value = "No messages yet.";
