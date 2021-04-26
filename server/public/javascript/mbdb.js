@@ -24,7 +24,9 @@ function assignUsername(uname) {thisUser = uname;}
 async function fetchMessages() {
   await fetch(getMessagesRoute.value).then(res => res.json()).then(messages => globalMessages = messages);
 }
-
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 function messageAlreadyExists(newmsg) {
   if (messages.length != 0) {
     for (var i = 0; i < messages.length; i++) {
@@ -212,6 +214,7 @@ class MessageComponent extends React.Component {
   loadMessages2() {
     const username = this.state.username;
     fetchMessages();
+    sleep(1000);
     this.setState({messages:globalMessages});
     console.log(this.state.messages);
     if (this.state.messages.length == 0) {
@@ -244,7 +247,7 @@ class MessageComponent extends React.Component {
         console.log(this.state.messages);
         this.loadMessages2();
       } else {
-        this.setState({taskMessage:"Failed to Send."}); 
+        this.setState({taskMessage:"Failed to Send."});
       }
     })
     }
