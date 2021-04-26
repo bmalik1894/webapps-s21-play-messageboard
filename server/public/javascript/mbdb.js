@@ -229,7 +229,7 @@ class MessageComponent extends React.Component {
 
   handleSendClick(e) {
     if (this.state.newMessage.length != 0) {
-    fetch (sendRoute, {
+    fetch (sendRoute.value, {
       method: 'POST',
       headers: {'Content-Type': 'application/json', 'Csrf-Token': csrfToken},
       body: JSON.stringify(thisUser, this.state.toUser, this.state.newMessage, "00:00")
