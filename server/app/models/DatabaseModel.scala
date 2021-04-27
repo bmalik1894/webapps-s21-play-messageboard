@@ -50,7 +50,6 @@ class DatabaseModel(db:Database)(implicit ec: ExecutionContext) {
   }
 
     def listUsers(): Future[Seq[String]] = {
-
         db.run(
             (for {
             user <- Users
