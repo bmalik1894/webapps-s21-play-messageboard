@@ -18,15 +18,22 @@ class DatabaseModel(db:Database)(implicit ec: ExecutionContext) {
     def getIdFromUser(username:String): Option[Int] = {
         val mach = db.run(Users.filter(userRow => userRow.username === username).result)
         mach.map(userRows => userRows.headOption.flatMap {
-            userRow => Some(userRow.id)
-        } )
+            userRow => {
+                println(userRow.username + " id is " + userRow.id.toString())
+                Some(userRow.id)
+            }
+            } )
         None
     }
 
     def getUserFromId(userid:Int): Option[String] = {
         val mach = db.run(Users.filter(userRow => userRow.id === userid).result)
         mach.map(userRows => userRows.headOption.flatMap {
-            userRow => Some(userRow.username)
+            userRow => {
+                println(userRow.id.toString() + " username is " + userRow.username)
+                Some(userRow.username)
+        
+            }
         } )
         None
     }
@@ -81,8 +88,8 @@ class DatabaseModel(db:Database)(implicit ec: ExecutionContext) {
             } yield {
                 message
             }).result
-        ).map(messages => messages.map(message => MessageItem(message.messageId, getUserFromId(message.touser).getOrElse("Unkown"), 
-                    getUserFromId(message.fromuser).getOrElse("Unkown"), message.body, message.timestamp)))
+        ).map(messages => messages.map(message => MessageItem(message.messageId, getUserFromId(message.touser).getOrElse("Unkown Sender"), 
+                    getUserFromId(message.fromuser).getOrElse("Unkown Recipient"), message.body, message.timestamp)))
     }
 
     def removeMessage(messageid:Int): Future[Boolean] = {
