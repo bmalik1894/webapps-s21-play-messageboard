@@ -222,7 +222,7 @@ class MessageComponent extends React.Component {
     } else {
       let textarea = document.getElementById("messageArea");
       textarea.value = "";
-      for (var i = 0; i < messages.length; i++) {
+      for (var i = 0; i < this.state.messages.length; i++) {
         textarea.value += this.state.messages[i].fromUser + " (to " + this.state.messages[i].toUser + "): " + this.state.messages[i].body + "\n";
       }
     }
