@@ -15,27 +15,27 @@ class DatabaseModel(db:Database)(implicit ec: ExecutionContext) {
     private var colors = Array("blue", "red", "orange", "black", "brown", "gray", "purple", "pink", "green")
 
 
-    def getIdFromUser(username:String): Option[Int] = {
+    def getIdFromUser(username:String):Int = {
         val mach = db.run(Users.filter(userRow => userRow.username === username).result)
         mach.map(userRows => userRows.headOption.flatMap {
             userRow => {
                 println(userRow.username + " id is " + userRow.id.toString())
-                Some(userRow.id)
+                userRow.id
             }
             } )
-        None
+            -1
     }
 
-    def getUserFromId(userid:Int): Option[String] = {
+    def getUserFromId(userid:Int): String = {
         val mach = db.run(Users.filter(userRow => userRow.id === userid).result)
         mach.map(userRows => userRows.headOption.flatMap {
             userRow => {
                 println(userRow.id.toString() + " username is " + userRow.username)
-                Some(userRow.username)
+                userRow.username
         
             }
         } )
-        None
+        "Unkown"
     }
 
     def validateUser(username: String, password:String): Future[Option[Int]] = {
@@ -88,8 +88,8 @@ class DatabaseModel(db:Database)(implicit ec: ExecutionContext) {
             } yield {
                 message
             }).result
-        ).map(messages => messages.map(message => MessageItem(message.messageId, getUserFromId(message.touser).getOrElse("Unkown Sender"), 
-                    getUserFromId(message.fromuser).getOrElse("Unkown Recipient"), message.body, message.timestamp)))
+        ).map(messages => messages.map(message => MessageItem(message.messageId, getUserFromId(message.touser), 
+                    getUserFromId(message.fromuser), message.body, message.timestamp)))
     }
 
     def removeMessage(messageid:Int): Future[Boolean] = {
