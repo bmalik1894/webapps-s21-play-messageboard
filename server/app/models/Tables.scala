@@ -20,15 +20,15 @@ trait Tables {
 
   /** Entity class storing rows of table Messages
    *  @param messageId Database column message_id SqlType(serial), AutoInc, PrimaryKey
-   *  @param touser Database column touser SqlType(int4)
-   *  @param fromuser Database column fromuser SqlType(int4)
+   *  @param touser Database column touser SqlType(varchar), Length(30,true)
+   *  @param fromuser Database column fromuser SqlType(varchar), Length(30,true)
    *  @param body Database column body SqlType(varchar), Length(2000,true)
    *  @param timestamp Database column timestamp SqlType(varchar), Length(30,true) */
-  case class MessagesRow(messageId: Int, touser: Int, fromuser: Int, body: String, timestamp: String)
+  case class MessagesRow(messageId: Int, touser: String, fromuser: String, body: String, timestamp: String)
   /** GetResult implicit for fetching MessagesRow objects using plain SQL queries */
   implicit def GetResultMessagesRow(implicit e0: GR[Int], e1: GR[String]): GR[MessagesRow] = GR{
     prs => import prs._
-    MessagesRow.tupled((<<[Int], <<[Int], <<[Int], <<[String], <<[String]))
+    MessagesRow.tupled((<<[Int], <<[String], <<[String], <<[String], <<[String]))
   }
   /** Table description of table messages. Objects of this class serve as prototypes for rows in queries. */
   class Messages(_tableTag: Tag) extends profile.api.Table[MessagesRow](_tableTag, "messages") {
@@ -38,19 +38,14 @@ trait Tables {
 
     /** Database column message_id SqlType(serial), AutoInc, PrimaryKey */
     val messageId: Rep[Int] = column[Int]("message_id", O.AutoInc, O.PrimaryKey)
-    /** Database column touser SqlType(int4) */
-    val touser: Rep[Int] = column[Int]("touser")
-    /** Database column fromuser SqlType(int4) */
-    val fromuser: Rep[Int] = column[Int]("fromuser")
+    /** Database column touser SqlType(varchar), Length(30,true) */
+    val touser: Rep[String] = column[String]("touser", O.Length(30,varying=true))
+    /** Database column fromuser SqlType(varchar), Length(30,true) */
+    val fromuser: Rep[String] = column[String]("fromuser", O.Length(30,varying=true))
     /** Database column body SqlType(varchar), Length(2000,true) */
     val body: Rep[String] = column[String]("body", O.Length(2000,varying=true))
     /** Database column timestamp SqlType(varchar), Length(30,true) */
     val timestamp: Rep[String] = column[String]("timestamp", O.Length(30,varying=true))
-
-    /** Foreign key referencing Users (database name messages_fromuser_fkey) */
-    lazy val usersFk1 = foreignKey("messages_fromuser_fkey", fromuser, Users)(r => r.id, onUpdate=ForeignKeyAction.NoAction, onDelete=ForeignKeyAction.Cascade)
-    /** Foreign key referencing Users (database name messages_touser_fkey) */
-    lazy val usersFk2 = foreignKey("messages_touser_fkey", touser, Users)(r => r.id, onUpdate=ForeignKeyAction.NoAction, onDelete=ForeignKeyAction.Cascade)
   }
   /** Collection-like TableQuery object for table Messages */
   lazy val Messages = new TableQuery(tag => new Messages(tag))

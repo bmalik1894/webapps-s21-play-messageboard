@@ -1,4 +1,7 @@
-[0m[[0m[33mwarn[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/controllers/Messageboarddb.scala:20:47: type JdbcProfile in package driver is deprecated (since 3.2): Use type `slick.jdbc.JdbcProfile` instead of `slick.driver.JdbcProfile`[0m
-[0m[[0m[33mwarn[0m] [0m[0m  extends MessagesAbstractController(cc) with HasDatabaseConfigProvider[JdbcProfile] { [0m
-[0m[[0m[33mwarn[0m] [0m[0m                                              ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/models/DatabaseModel.scala:8:15: object Tables is not a member of package models[0m
+[0m[[0m[31merror[0m] [0m[0mimport models.Tables._[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/models/DatabaseModel.scala:92:16: not found: value Messages[0m
+[0m[[0m[31merror[0m] [0m[0m        db.run(Messages.filter(_.messageId === messageid).delete).map(count => count > 0)[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

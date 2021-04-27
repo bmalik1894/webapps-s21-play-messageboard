@@ -6,8 +6,8 @@ CREATE TABLE users (
 );
 CREATE Table messages (
     message_id SERIAL PRIMARY KEY,
-    touser int4 NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-    fromuser int4 NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    touser varchar(30) NOT NULL,
+    fromuser varchar(30) NOT NULL,
     body varchar(2000) NOT NULL,
     timestamp varchar(30) NOT NULL
 );

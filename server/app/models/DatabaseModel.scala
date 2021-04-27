@@ -9,33 +9,22 @@ import models.Tables._
 import scala.concurrent.Future
 import org.mindrot.jbcrypt.BCrypt
 import scala.util.Random
+import scala.concurrent.duration._
 
 class DatabaseModel(db:Database)(implicit ec: ExecutionContext) {
     val rand = new Random
+    private val one = Duration(1000, MILLISECONDS)
     private var colors = Array("blue", "red", "orange", "black", "brown", "gray", "purple", "pink", "green")
 
 
-    def getIdFromUser(username:String):Int = {
+    def getIdFromUser(username:String): Future[Option[Int]] = {
         val mach = db.run(Users.filter(userRow => userRow.username === username).result)
         mach.map(userRows => userRows.headOption.flatMap {
             userRow => {
                 println(userRow.username + " id is " + userRow.id.toString())
-                userRow.id
+                Some(userRow.id)
             }
             } )
-            -1
-    }
-
-    def getUserFromId(userid:Int): String = {
-        val mach = db.run(Users.filter(userRow => userRow.id === userid).result)
-        mach.map(userRows => userRows.headOption.flatMap {
-            userRow => {
-                println(userRow.id.toString() + " username is " + userRow.username)
-                userRow.username
-        
-            }
-        } )
-        "Unkown"
     }
 
     def validateUser(username: String, password:String): Future[Option[Int]] = {
@@ -61,6 +50,7 @@ class DatabaseModel(db:Database)(implicit ec: ExecutionContext) {
   }
 
     def listUsers(): Future[Seq[String]] = {
+
         db.run(
             (for {
             user <- Users
@@ -70,27 +60,23 @@ class DatabaseModel(db:Database)(implicit ec: ExecutionContext) {
         )
     }
 
-    def sendMessage(userid:Int, target:String, message:String): Future[Boolean] = {
+    def sendMessage(username:String, target:String, message:String): Future[Boolean] = {
         val datetime = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm").format(LocalDateTime.now())
-        var targetid = getIdFromUser(target).getOrElse(-1)
-        if (targetid != -1) {
-            db.run(Messages += MessagesRow(-1, targetid, userid, message, datetime)).map(addCount => addCount > 0)
-        } else Future.successful(false)
+        db.run(Messages += MessagesRow(-1, target, username, message, datetime)).map(addCount => addCount > 0)
+        Future.successful(true)
     }
-
-
 
     def getMessages(username:String):Future[Seq[MessageItem]] = {
         db.run(
             (for {
                 user <- Users if user.username === username
-                message <- Messages if message.touser === user.id || message.fromuser === user.id || message.touser === 1
+                message <- Messages if message.touser === user.username || message.fromuser === user.username || message.touser === "Everyone"
             } yield {
-                message
+                message 
             }).result
-        ).map(messages => messages.map(message => MessageItem(message.messageId, getUserFromId(message.touser), 
-                    getUserFromId(message.fromuser), message.body, message.timestamp)))
-    }
+        ).map(messages => messages.map(message => MessageItem(message.messageId, message.touser, 
+                    message.fromuser, message.body, message.timestamp)))
+        }
 
     def removeMessage(messageid:Int): Future[Boolean] = {
         db.run(Messages.filter(_.messageId === messageid).delete).map(count => count > 0)

@@ -74,10 +74,10 @@ class Messageboarddb @Inject()(protected val dbConfigProvider: DatabaseConfigPro
   }
 
     def sendMessage = Action.async { implicit request =>
-      withSessionUserID { userid =>
+      withSessionUsername { username =>
         withJsonBody[String] { ud =>
         val splitup = ud.split("`", 2)
-        model.sendMessage(userid, splitup(0), splitup(1)).map(bool => Ok(Json.toJson(bool)))
+        model.sendMessage(username, splitup(0), splitup(1)).map(bool => Ok(Json.toJson(bool)))
         }
       }
     }
