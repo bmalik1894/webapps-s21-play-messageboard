@@ -28,8 +28,8 @@ class CanvasManager extends Actor {
         colors = colors.filterNot(x => x == color)
 
         println("\nInitializing new user: " + name)
-        val xinit = random.nextInt(1024)
-        val yinit = random.nextInt(1280)
+        val xinit = random.nextInt(200)
+        val yinit = random.nextInt(200)
         users = users ++ Array(User(ref, name, color, xinit, yinit))
 
         for (i <- 0 until users.length) {
