@@ -240,7 +240,7 @@ class MessageComponent extends React.Component {
     fetch (sendRoute.value, {
       method: 'POST',
       headers: {'Content-Type': 'application/json', 'Csrf-Token': csrfToken},
-      body: JSON.stringify({target, targetMessage})
+      body: JSON.stringify({toUser:target, body:targetMessage})
     }).then(res => res.json()).then( data => {
       if(data) {
         this.setState({ messages:data, taskMessage: "", newMessage: ""});
