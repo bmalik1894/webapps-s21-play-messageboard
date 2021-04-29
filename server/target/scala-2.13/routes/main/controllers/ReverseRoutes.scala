@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/conf/routes
-// @DATE:Thu Apr 22 11:04:58 CDT 2021
+// @DATE:Tue Apr 27 10:19:37 CDT 2021
 
 import play.api.mvc.Call
 
@@ -10,20 +10,20 @@ import _root_.controllers.Assets.Asset
 // @LINE:6
 package controllers {
 
-  // @LINE:39
+  // @LINE:42
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:39
+    // @LINE:42
     def at(file:String): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[String]].unbind("file", file))
     }
   
-    // @LINE:40
+    // @LINE:43
     def versioned(file:Asset): Call = {
       implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"))); _rrc
       Call("GET", _prefix + { _defaultPrefix } + "versionedAssets/" + implicitly[play.api.mvc.PathBindable[Asset]].unbind("file", file))
@@ -168,6 +168,12 @@ package controllers {
     def success(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "myPage")
+    }
+  
+    // @LINE:39
+    def scalajsCanvas(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "scalajsCanvas")
     }
   
     // @LINE:6

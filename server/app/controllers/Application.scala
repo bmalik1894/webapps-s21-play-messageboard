@@ -140,4 +140,8 @@ class Application @Inject()(cc: MessagesControllerComponents) extends MessagesAb
     }.getOrElse(Redirect(routes.Application.success()).flashing("error" -> "Could not Delete"))
   }
 
+  def scalajsCanvas = Action { implicit request =>
+    Ok(views.html.scalajscanvas())
+  }
+
 }

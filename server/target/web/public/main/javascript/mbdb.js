@@ -1,6 +1,7 @@
 "use strict"
 
 let thisUser = "";
+let globalMessages = [];
 
 class Message {
     constructor (body, target, from, time) {
@@ -20,19 +21,11 @@ const csrfToken = document.getElementById("csrfToken").value;
 const validateRoute = document.getElementById("validateUserRoute").value;
 const createRoute = document.getElementById("createUserRoute").value;
 function assignUsername(uname) {thisUser = uname;}
-function populateUserList(data) {
-  let users = data.replace("CurrUserlist:", "").split(",");
-  let userdropdown = document.getElementById("userDropDown");
-  var index = 0;
-  for (var user of users) {
-    if (userdropdown.innerHTML.indexOf('value="' + user + '"') == -1 && user != thisUser) {
-    let newopt = document.createElement("option");
-      newopt.value = user;
-      newopt.text = user;
-      userdropdown.add(newopt, userdropdown[index]);
-      index++;
-    }
-  }
+async function fetchMessages() {
+  await fetch(getMessagesRoute.value).then(res => res.json()).then(messages => globalMessages = messages);
+}
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
 function messageAlreadyExists(newmsg) {
   if (messages.length != 0) {
@@ -137,14 +130,30 @@ class LoginComponent extends React.Component {
   }
 }
 
+class UserComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {users: []}
+  }
+
+
+
+  render() {
+    let stuff = ce('select', {onClick: e => this.populateUserList(), onChange: e => this.setTarget(e), id:"userDropDown"}, 
+    ce('option', {value: "Everyone"}, "Everyone"),
+);
+    return stuff
+  }
+}
+
 class MessageComponent extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { messages: [], users:[], newMessage: "", taskMessage: "", toUser: "Everyone"};
+    this.state = { messages: [], users: [], newMessage: "", taskMessage: "", toUser: "Everyone"};
   }
 
-  componentDidMount() {    
-    this.requestUsers();
+  componentDidMount() {
+    this.populateUserList();
     this.loadMessages2();
   }
 
@@ -156,7 +165,7 @@ class MessageComponent extends React.Component {
       ce('br'),
       ce('div', null,
         ce('input', {type: 'text', value: this.state.newMessage, onChange: e => this.handleChange(e) }),
-        ce('select', {onClick: e => this.requestUsers(e), onChange: e => this.setTarget(e), id:"userDropDown"}, 
+        ce('select', {onClick: e => this.populateUserList(), onChange: e => this.setTarget(e), id:"userDropDown"}, 
             ce('option', {value: "Everyone"}, "Everyone")
         ),
         ce('button', {onClick: e => this.handleSendClick(e)}, 'Send Message'),
@@ -171,38 +180,11 @@ class MessageComponent extends React.Component {
       ce('button', { onClick: e => this.disconnect(e) }, 'Log out')
     );
   }
-  //////////////////////////////////////////////////////////
-
-
-
-  handleEvents(data) {
-        if (data.includes("CurrUserlist:")) {
-            populateUserList(data);
-        } else {
-            this.parseAndPipe(data);
-        }
-    }
-  
-    
-    
-  parseAndPipe(data) {
-      let selfmessages = data.split("\n");
-      for (var i = 0; i < selfmessages.length; i++) {
-        let puredata = selfmessages[i].split("`"); 
-        let newmsg = new Message(puredata[2], puredata[0], puredata[1], puredata[3]);
-        if (!messageAlreadyExists(newmsg)) {
-          messages.push(newmsg);
-          this.loadMessages()
-        } 
-      }
-    }
 
   ///////////////////////////////////////////////////////////////////////////
-  requestUsers(e) {
-    fetch(listUsersRoute).then(res => res.json()).then(this.user)
-  }
 
   disconnect(e) {
+    globalMessages = [];
     this.props.doLogout();
   }
 
@@ -212,32 +194,37 @@ class MessageComponent extends React.Component {
     document.getElementById("userDropDown").text = this.state.toUser;
   }
 
-  loadMessages() {
-    if (messages.length != 0) {
-      let textarea = document.getElementById("messageArea");
-      textarea.value = "";
-      for (var i = 0; i < messages.length; i++) {
-        textarea.value += messages[i].from + " (to " + messages[i].to+ "): " + messages[i].body + "\n"; 
+  populateUserList() {
+    fetch(listUsersRoute.value).then(res => res.json()).then(users => this.setState({users}));
+    fetchMessages();
+    this.loadMessages2();
+    let userdropdown = document.getElementById("userDropDown");
+    var index = 0;
+    for (var user of this.state.users) {
+      if (userdropdown.innerHTML.indexOf('value="' + user + '"') == -1 && user != thisUser) {
+      let newopt = document.createElement("option");
+        newopt.value = user;
+        newopt.text = user;
+        userdropdown.add(newopt, userdropdown[index]);
+        index++;
       }
-    } else {
-      document.getElementById("messageArea").text += "No messages yet.";
     }
   }
 
-  loadMessages2() {
-    fetch(getMessagesRoute).then(res => res.json()).then(messages => this.setState({messages}))
-    //if(this.state.messages.length != 0) {
-    //  for (var j = 0; j < this.state.messages.length; j++ ) {
-    //    j = j;
-    //  }
-    //}
+  
 
+  loadMessages2() {
+    const username = this.state.username;
+    fetchMessages();
+    sleep(1000);
+    this.setState({messages:globalMessages});
+    console.log(this.state.messages);
     if (this.state.messages.length == 0) {
       document.getElementById("messageArea").value = "No messages yet.";
     } else {
       let textarea = document.getElementById("messageArea");
       textarea.value = "";
-      for (var i = 0; i < messages.length; i++) {
+      for (var i = 0; i < this.state.messages.length; i++) {
         textarea.value += this.state.messages[i].fromUser + " (to " + this.state.messages[i].toUser + "): " + this.state.messages[i].body + "\n";
       }
     }
@@ -249,17 +236,20 @@ class MessageComponent extends React.Component {
 
   handleSendClick(e) {
     if (this.state.newMessage.length != 0) {
-    let msg = "NewMessage`" + thisUser + "`" +  this.state.toUser + "`" + this.state.newMessage;
-    fetch (sendRoute, {
+    let target = this.state.toUser;
+    let targetMessage = this.state.newMessage;
+    let parseme = target + "`" + targetMessage;
+    fetch (sendRoute.value, {
       method: 'POST',
       headers: {'Content-Type': 'application/json', 'Csrf-Token': csrfToken},
-      body: JSON.stringify(this.state.newMessage)
+      body: JSON.stringify({toUser:target, body:targetMessage})
     }).then(res => res.json()).then( data => {
       if(data) {
-        this.loadMessages();
-        this.setState({ taskMessage: "", newMessage: ""});
+        this.setState({ messages:data, taskMessage: "", newMessage: ""});
+        console.log(this.state.messages);
+        this.loadMessages2();
       } else {
-        this.setState({taskMessage:"Failed to Send."}); 
+        this.setState({taskMessage:"Failed to Send."});
       }
     })
     }

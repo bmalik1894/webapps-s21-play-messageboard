@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/conf/routes
-// @DATE:Thu Apr 22 11:04:58 CDT 2021
+// @DATE:Tue Apr 27 10:19:37 CDT 2021
 
 package router
 
@@ -21,7 +21,7 @@ class Routes(
   Messageboard_1: controllers.Messageboard,
   // @LINE:30
   Messageboarddb_2: controllers.Messageboarddb,
-  // @LINE:39
+  // @LINE:42
   Assets_4: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
@@ -36,7 +36,7 @@ class Routes(
     Messageboard_1: controllers.Messageboard,
     // @LINE:30
     Messageboarddb_2: controllers.Messageboarddb,
-    // @LINE:39
+    // @LINE:42
     Assets_4: controllers.Assets
   ) = this(errorHandler, Application_3, WebSocket_0, Messageboard_1, Messageboarddb_2, Assets_4, "/")
 
@@ -76,6 +76,7 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """userListDB""", """controllers.Messageboarddb.getUsers"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """messageListDB""", """controllers.Messageboarddb.messageList"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """logoutDB""", """controllers.Messageboarddb.logout"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """scalajsCanvas""", """controllers.Application.scalajsCanvas"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.at(file:String)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """versionedAssets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     Nil
@@ -536,10 +537,28 @@ class Routes(
   )
 
   // @LINE:39
-  private[this] lazy val controllers_Assets_at25_route = Route("GET",
+  private[this] lazy val controllers_Application_scalajsCanvas25_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("scalajsCanvas")))
+  )
+  private[this] lazy val controllers_Application_scalajsCanvas25_invoker = createInvoker(
+    Application_3.scalajsCanvas,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Application",
+      "scalajsCanvas",
+      Nil,
+      "GET",
+      this.prefix + """scalajsCanvas""",
+      """ Scalajs Canvas Game Routes""",
+      Seq()
+    )
+  )
+
+  // @LINE:42
+  private[this] lazy val controllers_Assets_at26_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_at25_invoker = createInvoker(
+  private[this] lazy val controllers_Assets_at26_invoker = createInvoker(
     Assets_4.at(fakeValue[String]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -553,11 +572,11 @@ class Routes(
     )
   )
 
-  // @LINE:40
-  private[this] lazy val controllers_Assets_versioned26_route = Route("GET",
+  // @LINE:43
+  private[this] lazy val controllers_Assets_versioned27_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("versionedAssets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_versioned26_invoker = createInvoker(
+  private[this] lazy val controllers_Assets_versioned27_invoker = createInvoker(
     Assets_4.versioned(fakeValue[String], fakeValue[Asset]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -725,15 +744,21 @@ class Routes(
       }
   
     // @LINE:39
-    case controllers_Assets_at25_route(params@_) =>
-      call(params.fromPath[String]("file", None)) { (file) =>
-        controllers_Assets_at25_invoker.call(Assets_4.at(file))
+    case controllers_Application_scalajsCanvas25_route(params@_) =>
+      call { 
+        controllers_Application_scalajsCanvas25_invoker.call(Application_3.scalajsCanvas)
       }
   
-    // @LINE:40
-    case controllers_Assets_versioned26_route(params@_) =>
+    // @LINE:42
+    case controllers_Assets_at26_route(params@_) =>
+      call(params.fromPath[String]("file", None)) { (file) =>
+        controllers_Assets_at26_invoker.call(Assets_4.at(file))
+      }
+  
+    // @LINE:43
+    case controllers_Assets_versioned27_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
-        controllers_Assets_versioned26_invoker.call(Assets_4.versioned(path, file))
+        controllers_Assets_versioned27_invoker.call(Assets_4.versioned(path, file))
       }
   }
 }

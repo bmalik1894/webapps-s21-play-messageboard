@@ -247,7 +247,7 @@
         "platform": {
             "name": "jvm",
             "config": {
-                "home": "/usr/java/jdk-11.0.8",
+                "home": "/usr/java/jdk-11.0.10",
                 "options": [
                     "-Duser.dir=/users/bmalik/github/webapps/webapps-s21-play-messageboard/project"
                 ]

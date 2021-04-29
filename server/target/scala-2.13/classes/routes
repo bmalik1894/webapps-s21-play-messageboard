@@ -35,6 +35,9 @@ GET         /userListDB                     controllers.Messageboarddb.getUsers
 GET         /messageListDB                  controllers.Messageboarddb.messageList
 GET         /logoutDB                       controllers.Messageboarddb.logout
 
+# Scalajs Canvas Game Routes
+GET         /scalajsCanvas                  controllers.Application.scalajsCanvas 
+
 # Prefix must match `play.assets.urlPrefix`
 GET        /assets/*file                 controllers.Assets.at(file)
 GET        /versionedAssets/*file        controllers.Assets.versioned(path="/public", file: Asset)

@@ -1,0 +1,20 @@
+@()(implicit request: RequestHeader, flash:Flash)
+
+@main("Scalajs Canvas Game") {
+<body id="sjsbody" style="background-image: url(https://image.shutterstock.com/image-photo/mountains-under-mist-morning-amazing-600w-1725825019.jpg); background-size:100% 100%; ">
+    <h3 id="title" style="margin-left: auto; margin-right: auto; display: block;">Canvas Game - Use WASD to collect the pellets before time runs out!</h3>
+    <div>
+        <button id='startButton' style="margin-left: auto; margin-right: auto; display: block;" onclick='initializeGame()'>Start Game</button>
+        <div style="background-color: white; margin-left: auto; margin-right: auto; display: block; width: 500px;" width="500">
+            <span>Time left: </span>
+            <span id="timer">00</span>
+            <span id="points" style="float:right">0</span>
+            <span style="float:right; padding-right: 10px;">Points </span><br>
+        </div>
+        <canvas width="500" height="500" id="scalajs-canvas" style="margin-left: auto; margin-right: auto; display: block;"></canvas>
+    </div>
+    <div style="text-align:center; position: relative; bottom:0; width:100%; background-color: rgba(255, 255, 255, 1)">
+        <a href="@routes.Application.logout()" id="logout">Go back</a>
+    </div>
+</body>
+}

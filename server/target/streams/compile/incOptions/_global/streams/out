@@ -1,24 +1,2 @@
 [0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/target/scala-2.13/classes.bak[0m
-[0m[[0m[0mdebug[0m] [0m[0mAbout to delete class files:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Tables$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Tables.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Tables$MessagesRow.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Tables$UsersRow$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Tables$UsersRow.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Tables$MessagesRow$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	DatabaseModel.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Tables$Users.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Tables$Messages.class[0m
-[0m[[0m[0mdebug[0m] [0m[0mWe backup class files:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Tables$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Tables.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Tables$MessagesRow.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Tables$UsersRow$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Tables$UsersRow.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Tables$MessagesRow$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	DatabaseModel.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Tables$Users.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Tables$Messages.class[0m
-[0m[[0m[0mdebug[0m] [0m[0mRegistering generated classes:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	DatabaseModel.class[0m
 [0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/target/scala-2.13/classes.bak[0m
