@@ -1,0 +1,205 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(run, Some(ec69e5a2-6b7c-4816-a31f-d1e691d11604), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / run[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@1f96db42, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@557a1b8b, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/target/scala-2.13/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/controllers/DrawSocket.scala:19:39: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method apply,[0m
+[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
+[0m[[0m[33mwarn[0m] [0m[0m    val manager = system.actorOf(Props[DrawManager], "DrawManager")[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                      ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 18 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@38a68a73, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:play-server[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 18 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@3eaaec02, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@1e0ee999, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/target/scala-2.13/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 18 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@64206281, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:play-server[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 18 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@2999f093, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@44a6994d, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m4 deprecations (since 2.13.0); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[0minfo[0m] [0m[0mFast optimizing /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/play-client-fastopt[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 2 Scala sources to /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/target/scala-2.13/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/controllers/WebSocket.scala:19:39: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method apply,[0m
+[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
+[0m[[0m[33mwarn[0m] [0m[0m    val manager = system.actorOf(Props[CanvasManager], "Manager")[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                      ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 14 -- invalidated: 4 -- trees read: 431[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@3dbabcfe, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:play-server[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 18 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@65efac8e, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@dfc6f75, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m4 deprecations (since 2.13.0); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[0minfo[0m] [0m[0mFast optimizing /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/play-client-fastopt[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 14 -- invalidated: 4 -- trees read: 3[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@6db11282, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:play-server[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 18 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@2ee05e3c, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@792edda6, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:43:7: not found: value context[0m
+[0m[[0m[31merror[0m] [0m[0m      context.fillStyle = "white"[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:44:7: not found: value context[0m
+[0m[[0m[31merror[0m] [0m[0m      context.fillRect(0, 0, 500, 500)[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:49:11: not found: value context[0m
+[0m[[0m[31merror[0m] [0m[0m          context.fillStyle = "white"[0m
+[0m[[0m[31merror[0m] [0m[0m          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:50:11: not found: value context[0m
+[0m[[0m[31merror[0m] [0m[0m          context.fillRect(0, 0, 500, 500)[0m
+[0m[[0m[31merror[0m] [0m[0m          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:62:11: not found: value context[0m
+[0m[[0m[31merror[0m] [0m[0m          context.fillStyle = "green"[0m
+[0m[[0m[31merror[0m] [0m[0m          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:63:33: not found: value context[0m
+[0m[[0m[31merror[0m] [0m[0m          pellets.foreach( p => context.fillRect(p.x, p.y, 10, 10))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:66:11: not found: value context[0m
+[0m[[0m[31merror[0m] [0m[0m          context.fillStyle = "black"[0m
+[0m[[0m[31merror[0m] [0m[0m          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:67:11: not found: value context[0m
+[0m[[0m[31merror[0m] [0m[0m          context.fillRect(playerLoc.x, playerLoc.y, 30,30)[0m
+[0m[[0m[31merror[0m] [0m[0m          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:151:24: not found: value scoreBoard[0m
+[0m[[0m[31merror[0m] [0m[0m  def updatePoints() = scoreBoard.innerHTML = points.toString() [0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:78:13: not found: value context[0m
+[0m[[0m[31merror[0m] [0m[0m            context.fillStyle = "black"[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:79:13: not found: value context[0m
+[0m[[0m[31merror[0m] [0m[0m            context.fillText("You win!", 235, 250)[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:112:5: not found: value context[0m
+[0m[[0m[31merror[0m] [0m[0m    context.fillStyle = "white"[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:113:5: not found: value context[0m
+[0m[[0m[31merror[0m] [0m[0m    context.fillRect(0,0,500,500)[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:115:5: not found: value context[0m
+[0m[[0m[31merror[0m] [0m[0m    context.fillStyle = "black"[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:116:5: not found: value context[0m
+[0m[[0m[31merror[0m] [0m[0m    context.fillRect(playerLoc.x, playerLoc.y, 30, 30)[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:118:5: not found: value context[0m
+[0m[[0m[31merror[0m] [0m[0m    context.fillStyle = "green"[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:119:27: not found: value context[0m
+[0m[[0m[31merror[0m] [0m[0m    pellets.foreach( p => context.fillRect(p.x, p.y, 10, 10))[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:125:7: not found: value context[0m
+[0m[[0m[31merror[0m] [0m[0m      context.fillStyle = "black"[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:126:7: not found: value context[0m
+[0m[[0m[31merror[0m] [0m[0m      context.fillText("GAME OVER", 220, 250, 200.00)[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:129:7: not found: value clock[0m
+[0m[[0m[31merror[0m] [0m[0m      clock.innerHTML = timeRemaining.toString()[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:30:1: A try without a catch or finally is equivalent to putting its body in a block; no exceptions are handled.[0m
+[0m[[0m[33mwarn[0m] [0m[0mtry {[0m
+[0m[[0m[33mwarn[0m] [0m[0m^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[31merror[0m] [0m[0m20 errors found[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[31merror[0m] [0m[0m(client / Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@5a294bb9, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@54635369, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m4 deprecations (since 2.13.0); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[0minfo[0m] [0m[0mFast optimizing /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/play-client-fastopt[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/target/scala-2.13/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 14 -- invalidated: 4 -- trees read: 3[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@616d27d7, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:play-server[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 18 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@184336e4, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@7c1b286d, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m4 deprecations (since 2.13.0); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[0minfo[0m] [0m[0mFast optimizing /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/play-client-fastopt[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 14 -- invalidated: 4 -- trees read: 3[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@520d03e1, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:play-server[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 18 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@18f0bb58, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@4e3835cb, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m4 deprecations (since 2.13.0); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[0minfo[0m] [0m[0mFast optimizing /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/play-client-fastopt[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 14 -- invalidated: 4 -- trees read: 3[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@545239b, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:play-server[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 18 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@4033de66, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0minfo[0m] [0m[0mshutting down sbt server[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[31merror[0m] [0m[0mjava.io.IOException: Illegal seek[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.io.FileInputStream.available0(Native Method)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.io.FileInputStream.available(FileInputStream.java:330)[0m
+[0m[[0m[31merror[0m] [0m[0m	at play.sbt.PlayConsoleInteractionMode$InputStreamWrapper.read(PlayInteractionMode.scala:65)[0m
+[0m[[0m[31merror[0m] [0m[0m	at jline.internal.NonBlockingInputStream.read(NonBlockingInputStream.java:245)[0m
+[0m[[0m[31merror[0m] [0m[0m	at jline.internal.InputStreamReader.read(InputStreamReader.java:258)[0m
+[0m[[0m[31merror[0m] [0m[0m	at jline.internal.InputStreamReader.read(InputStreamReader.java:195)[0m
+[0m[[0m[31merror[0m] [0m[0m	at jline.console.ConsoleReader.readCharacter(ConsoleReader.java:2180)[0m
+[0m[[0m[31merror[0m] [0m[0m	at jline.console.ConsoleReader.readCharacter(ConsoleReader.java:2170)[0m
+[0m[[0m[31merror[0m] [0m[0m	at play.sbt.PlayConsoleInteractionMode$.waitEOF$1(PlayInteractionMode.scala:100)[0m
+[0m[[0m[31merror[0m] [0m[0m	at play.sbt.PlayConsoleInteractionMode$.$anonfun$waitForKey$2(PlayInteractionMode.scala:111)[0m
+[0m[[0m[31merror[0m] [0m[0m	at play.sbt.PlayConsoleInteractionMode$.$anonfun$doWithoutEcho$1(PlayInteractionMode.scala:118)[0m
+[0m[[0m[31merror[0m] [0m[0m	at play.sbt.PlayConsoleInteractionMode$.$anonfun$doWithoutEcho$1$adapted(PlayInteractionMode.scala:115)[0m
+[0m[[0m[31merror[0m] [0m[0m	at play.sbt.PlayConsoleInteractionMode$.withConsoleReader(PlayInteractionMode.scala:94)[0m
+[0m[[0m[31merror[0m] [0m[0m	at play.sbt.PlayConsoleInteractionMode$.doWithoutEcho(PlayInteractionMode.scala:115)[0m
+[0m[[0m[31merror[0m] [0m[0m	at play.sbt.PlayConsoleInteractionMode$.$anonfun$waitForKey$1(PlayInteractionMode.scala:111)[0m
+[0m[[0m[31merror[0m] [0m[0m	at play.sbt.PlayConsoleInteractionMode$.$anonfun$waitForKey$1$adapted(PlayInteractionMode.scala:98)[0m
+[0m[[0m[31merror[0m] [0m[0m	at play.sbt.PlayConsoleInteractionMode$.withConsoleReader(PlayInteractionMode.scala:94)[0m
+[0m[[0m[31merror[0m] [0m[0m	at play.sbt.PlayConsoleInteractionMode$.waitForKey(PlayInteractionMode.scala:98)[0m
+[0m[[0m[31merror[0m] [0m[0m	at play.sbt.PlayConsoleInteractionMode$.waitForCancel(PlayInteractionMode.scala:122)[0m
+[0m[[0m[31merror[0m] [0m[0m	at play.sbt.run.PlayRun$.$anonfun$playRunTask$3(PlayRun.scala:121)[0m
+[0m[[0m[31merror[0m] [0m[0m	at play.sbt.run.PlayRun$.$anonfun$playRunTask$3$adapted(PlayRun.scala:67)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.Function1.$anonfun$compose$1(Function1.scala:49)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:62)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.std.Transform$$anon$4.work(Transform.scala:68)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Execute.$anonfun$submit$2(Execute.scala:282)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:23)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Execute.work(Execute.scala:291)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Execute.$anonfun$submit$1(Execute.scala:282)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.CompletionService$$anon$2.call(CompletionService.scala:64)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.Thread.run(Thread.java:834)[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mrun[0m) java.io.IOException: Illegal seek[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 8798 s (02:26:38), completed May 4, 2021, 11:07:32 AM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
+[0m[[0m[0minfo[0m] [0m[0msbt server started at local:///users/bmalik/.sbt/1.0/server/085e7dff8ac320359032/sock[0m
+[0m[[0m[0minfo[0m] [0m[0mstarted sbt server[0m

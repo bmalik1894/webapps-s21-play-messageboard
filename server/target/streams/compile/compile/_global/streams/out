@@ -1,30 +1,25 @@
-[0m[[0m[33mwarn[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/controllers/Application.scala:46:19: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method bindFromRequest,[0m
-[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
-[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
-[0m[[0m[33mwarn[0m] [0m[0m        loginForm.bindFromRequest.fold([0m
-[0m[[0m[33mwarn[0m] [0m[0m                  ^[0m
-[0m[[0m[33mwarn[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/controllers/Application.scala:70:15: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method bindFromRequest,[0m
-[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
-[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
-[0m[[0m[33mwarn[0m] [0m[0m    loginForm.bindFromRequest.fold([0m
-[0m[[0m[33mwarn[0m] [0m[0m              ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m
-[0m[[0m[33mwarn[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/controllers/Application.scala:46:19: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method bindFromRequest,[0m
-[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
-[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
-[0m[[0m[33mwarn[0m] [0m[0m        loginForm.bindFromRequest.fold([0m
-[0m[[0m[33mwarn[0m] [0m[0m                  ^[0m
-[0m[[0m[33mwarn[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/controllers/Application.scala:70:15: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method bindFromRequest,[0m
-[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
-[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
-[0m[[0m[33mwarn[0m] [0m[0m    loginForm.bindFromRequest.fold([0m
-[0m[[0m[33mwarn[0m] [0m[0m              ^[0m
-[0m[[0m[33mwarn[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/controllers/Messageboard.scala:21:39: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method apply,[0m
-[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
-[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
-[0m[[0m[33mwarn[0m] [0m[0m    val manager = system.actorOf(Props[MessageManager], "MessageManager")[0m
-[0m[[0m[33mwarn[0m] [0m[0m                                      ^[0m
-[0m[[0m[33mwarn[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/controllers/Messageboarddb.scala:20:47: type JdbcProfile in package driver is deprecated (since 3.2): Use type `slick.jdbc.JdbcProfile` instead of `slick.driver.JdbcProfile`[0m
-[0m[[0m[33mwarn[0m] [0m[0m  extends MessagesAbstractController(cc) with HasDatabaseConfigProvider[JdbcProfile] { [0m
-[0m[[0m[33mwarn[0m] [0m[0m                                              ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mfour warnings found[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/actors/DrawActor.scala:7:8: object Line is not a member of package edu.trinity.videoquizreact.shared[0m
+[0m[[0m[31merror[0m] [0m[0mimport edu.trinity.videoquizreact.shared.{Line, Point}[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/actors/DrawActor.scala:17:41: not found: value Point[0m
+[0m[[0m[31merror[0m] [0m[0m                val (pointa, pointb) = (Point(nums(0).toDouble, nums(1).toDouble), Point(nums(2).toDouble, nums(3).toDouble)) [0m
+[0m[[0m[31merror[0m] [0m[0m                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/actors/DrawActor.scala:17:84: not found: value Point[0m
+[0m[[0m[31merror[0m] [0m[0m                val (pointa, pointb) = (Point(nums(0).toDouble, nums(1).toDouble), Point(nums(2).toDouble, nums(3).toDouble)) [0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/actors/DrawManager.scala:10:8: object Line is not a member of package edu.trinity.videoquizreact.shared[0m
+[0m[[0m[31merror[0m] [0m[0mimport edu.trinity.videoquizreact.shared.{Line, Point}[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/actors/DrawManager.scala:50:29: not found: type Line[0m
+[0m[[0m[31merror[0m] [0m[0m    case class NewLine(line:Line)[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/actors/DrawActor.scala:18:47: not found: value Line[0m
+[0m[[0m[31merror[0m] [0m[0m                manager ! DrawManager.NewLine(Line(pointa, pointb, nums(4)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/actors/DrawManager.scala:15:25: not found: type Line[0m
+[0m[[0m[31merror[0m] [0m[0m    var vectors = Array[Line]()[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/actors/DrawManager.scala:27:28: not found: type Line[0m
+[0m[[0m[31merror[0m] [0m[0m    def updateVectors(line:Line) = {[0m
+[0m[[0m[31merror[0m] [0m[0m                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m8 errors found[0m

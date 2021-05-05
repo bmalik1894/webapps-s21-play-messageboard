@@ -1,0 +1,17 @@
+@()(implicit request: RequestHeader, flash:Flash)
+
+@main("Scalajs Drawing") {
+<body id="sjsdraw" style="background-image: url(https://image.shutterstock.com/image-photo/mountains-under-mist-morning-amazing-600w-1725825019.jpg); background-size:100% 100%; ">
+    <h3 id="title" style="margin-left: auto; margin-right: auto; display: block;">Canvas Game - Draw with friends!</h3>
+    <input type="hidden" id="ws-route" value="@routes.DrawSocket.socket().absoluteURL()">
+    <div>
+        <canvas width="500" height="500" id="scalajs-draw" style="margin-left: auto; margin-right: auto; display: block;"></canvas>
+        <canvas width="1" height="1" id="scalajs-canvas" style="margin-left: auto; margin-right: auto; display: block;"></canvas>
+        <input type="color" width="500" id="colorpicker" style="margin-left: auto; margin-right: auto; display: block;">
+        <input type="range" width="500" min="2" max="10" defaultValue="5"id="sizepicker" style="margin-left: auto; margin-right: auto; display: block;">
+    </div>
+    <div style="text-align:center; position: relative; bottom:0; width:100%; background-color: rgba(255, 255, 255, 1)">
+        <a href="@routes.Application.logout()" id="logout">Go back</a>
+    </div>
+</body>
+}

@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/conf/routes
-// @DATE:Tue Apr 27 10:19:37 CDT 2021
+// @DATE:Tue May 04 08:38:43 CDT 2021
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -10,7 +10,7 @@ import _root_.controllers.Assets.Asset
 // @LINE:6
 package controllers.javascript {
 
-  // @LINE:42
+  // @LINE:46
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -18,7 +18,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:42
+    // @LINE:46
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """
@@ -28,7 +28,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:43
+    // @LINE:47
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """
@@ -144,6 +144,36 @@ package controllers.javascript {
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "Canvas"})
+        }
+      """
+    )
+  
+  }
+
+  // @LINE:42
+  class ReverseDrawSocket(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:43
+    def socket: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.DrawSocket.socket",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "drawSocket"})
+        }
+      """
+    )
+  
+    // @LINE:42
+    def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.DrawSocket.index",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "drawSjs"})
         }
       """
     )

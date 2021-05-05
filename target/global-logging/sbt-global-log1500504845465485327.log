@@ -1,0 +1,69 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(run, Some(06c8f8be-7c1f-4ab5-997e-ee5078957c7f), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / run[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@3c0403a, check cycles: false, forcegc: true[0m
+[0m[[0m[33mwarn[0m] [0m[0mjackson-core-2.10.5.jar no longer exists at /users/bmalik/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.10.5/jackson-core-2.10.5.jar[0m
+[0m[[0m[0minfo[0m] [0m[0mUpdating [0m
+[0m[[0m[0minfo[0m] [0m[0mResolved  dependencies[0m
+[0m[[0m[0minfo[0m] [0m[0mFetching artifacts of [0m
+[0m[[0m[0minfo[0m] [0m[0mFetched artifacts of [0m
+[0m[[0m[0minfo[0m] [0m[0mUpdating [0m
+[0m[[0m[0minfo[0m] [0m[0mResolved  dependencies[0m
+[0m[[0m[0minfo[0m] [0m[0mFetching artifacts of [0m
+[0m[[0m[0minfo[0m] [0m[0mFetched artifacts of [0m
+[0m[[0m[33mwarn[0m] [0m[0mThere may be incompatibilities among your library dependencies; run 'evicted' to see detailed eviction warnings.[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@7aa4015c, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 8 Scala sources and 1 Java source to /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/target/scala-2.13/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/controllers/DrawSocket.scala:19:39: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method apply,[0m
+[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
+[0m[[0m[33mwarn[0m] [0m[0m    val manager = system.actorOf(Props[DrawManager], "Manager")[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                      ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 16 Scala sources to /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/target/scala-2.13/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/controllers/Application.scala:46:19: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method bindFromRequest,[0m
+[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
+[0m[[0m[33mwarn[0m] [0m[0m        loginForm.bindFromRequest.fold([0m
+[0m[[0m[33mwarn[0m] [0m[0m                  ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/controllers/Application.scala:70:15: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method bindFromRequest,[0m
+[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
+[0m[[0m[33mwarn[0m] [0m[0m    loginForm.bindFromRequest.fold([0m
+[0m[[0m[33mwarn[0m] [0m[0m              ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/controllers/DrawSocket.scala:19:39: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method apply,[0m
+[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
+[0m[[0m[33mwarn[0m] [0m[0m    val manager = system.actorOf(Props[DrawManager], "Manager")[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                      ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/controllers/Messageboard.scala:21:39: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method apply,[0m
+[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
+[0m[[0m[33mwarn[0m] [0m[0m    val manager = system.actorOf(Props[MessageManager], "MessageManager")[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                      ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/controllers/Messageboarddb.scala:20:47: type JdbcProfile in package driver is deprecated (since 3.2): Use type `slick.jdbc.JdbcProfile` instead of `slick.driver.JdbcProfile`[0m
+[0m[[0m[33mwarn[0m] [0m[0m  extends MessagesAbstractController(cc) with HasDatabaseConfigProvider[JdbcProfile] { [0m
+[0m[[0m[33mwarn[0m] [0m[0m                                              ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m5 warnings found[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 18 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@21a27b30, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:play-server[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 18 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@4279ebe8, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@74bdd330, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/target/scala-2.13/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/app/controllers/DrawSocket.scala:19:39: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method apply,[0m
+[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
+[0m[[0m[33mwarn[0m] [0m[0m    val manager = system.actorOf(Props[DrawManager], "DrawManager")[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                      ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 18 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@7ce7ab81, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:play-server[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 18 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@ded01d4, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 111 s (01:51), completed May 4, 2021, 8:40:15 AM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

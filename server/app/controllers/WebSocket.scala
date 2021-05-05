@@ -26,6 +26,5 @@ class WebSocket @Inject()(cc: MessagesControllerComponents)(implicit system: Act
         ActorFlow.actorRef { out =>
             CanvasActor.props(out, manager)
         }
-    
     }
 }

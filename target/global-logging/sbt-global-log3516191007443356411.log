@@ -1,0 +1,206 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(run, Some(f47f4cfe-51df-452f-ad15-77542281bd2f), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / run[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@14d3bee8, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@525682f2, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 18 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@788a0d00, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:play-server[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 18 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@13eed82a, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@24e067cd, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:92:7: illegal start of simple expression[0m
+[0m[[0m[31merror[0m] [0m[0m      }[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[31merror[0m] [0m[0m(client / Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@59eadfd2, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@6d8e9e20, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:113:5: not found: value context[0m
+[0m[[0m[31merror[0m] [0m[0m    context.fillStyle = "white"[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:114:5: not found: value context[0m
+[0m[[0m[31merror[0m] [0m[0m    context.fillRect(0,0,500,500)[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:116:5: not found: value context[0m
+[0m[[0m[31merror[0m] [0m[0m    context.fillStyle = "black"[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:117:5: not found: value context[0m
+[0m[[0m[31merror[0m] [0m[0m    context.fillRect(playerLoc.x, playerLoc.y, 30, 30)[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:119:5: not found: value context[0m
+[0m[[0m[31merror[0m] [0m[0m    context.fillStyle = "green"[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:120:27: not found: value context[0m
+[0m[[0m[31merror[0m] [0m[0m    pellets.foreach( p => context.fillRect(p.x, p.y, 10, 10))[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:126:7: not found: value context[0m
+[0m[[0m[31merror[0m] [0m[0m      context.fillStyle = "black"[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:127:7: not found: value context[0m
+[0m[[0m[31merror[0m] [0m[0m      context.fillText("GAME OVER", 220, 250, 200.00)[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m8 errors found[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[31merror[0m] [0m[0m(client / Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@26eb30d3, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@3aaab69b, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m4 deprecations (since 2.13.0); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[0minfo[0m] [0m[0mFast optimizing /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/play-client-fastopt[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 14 -- invalidated: 4 -- trees read: 431[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@5bbacc80, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:play-server[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 18 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@4453c8c8, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@1f669084, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m4 deprecations (since 2.13.0); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[0minfo[0m] [0m[0mFast optimizing /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/play-client-fastopt[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 14 -- invalidated: 4 -- trees read: 3[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@ae7704e, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:play-server[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 18 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@a184ce5, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@79c5e320, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m4 deprecations (since 2.13.0); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[0minfo[0m] [0m[0mFast optimizing /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/play-client-fastopt[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 14 -- invalidated: 4 -- trees read: 4[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@11866b2b, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:play-server[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 18 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@5f1a2c5a, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@8c35820, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m4 deprecations (since 2.13.0); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[0minfo[0m] [0m[0mFast optimizing /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/play-client-fastopt[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 14 -- invalidated: 4 -- trees read: 3[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@705ca419, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:play-server[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 18 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@6f7ef40c, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@771bdca3, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m4 deprecations (since 2.13.0); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[0minfo[0m] [0m[0mFast optimizing /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/play-client-fastopt[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 14 -- invalidated: 4 -- trees read: 3[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@5509af77, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:play-server[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 18 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@1d2f7b5b, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@74f4f8c9, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m4 deprecations (since 2.13.0); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[0minfo[0m] [0m[0mFast optimizing /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/play-client-fastopt[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 14 -- invalidated: 4 -- trees read: 4[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@194c868b, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:play-server[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 18 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@738e1909, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@7641f9a, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 18 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@4e0b2a6b, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:play-server[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 18 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@1c71e9a9, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@1f79572c, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:99:35: org.scalajs.dom.raw.WebSocket.type does not take parameters[0m
+[0m[[0m[31merror[0m] [0m[0m        val socket = dom.WebSocket(socketRoute)[0m
+[0m[[0m[31merror[0m] [0m[0m                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[31merror[0m] [0m[0m(client / Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@2e228483, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@1de14f93, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m4 deprecations (since 2.13.0); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[0minfo[0m] [0m[0mFast optimizing /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/play-client-fastopt[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 14 -- invalidated: 4 -- trees read: 3[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@7daa2a8c, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:play-server[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 18 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@2d61bf7b, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@139b59d0, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m4 deprecations (since 2.13.0); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[0minfo[0m] [0m[0mFast optimizing /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/play-client-fastopt[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 14 -- invalidated: 4 -- trees read: 3[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@5c5defd4, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:play-server[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 18 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@50195ceb, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@1a81671e, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m4 deprecations (since 2.13.0); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[0minfo[0m] [0m[0mFast optimizing /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/play-client-fastopt[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 14 -- invalidated: 4 -- trees read: 3[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@563fa0e5, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:play-server[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 18 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@21769f7a, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@190ab4ce, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/users/bmalik/github/webapps/webapps-s21-play-messageboard/client/src/main/scala/canvasjs/CanvasGame.scala:103:51: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Function1[org.scalajs.dom.MessageEvent,Unit] (in scala) [0m
+[0m[[0m[31merror[0m] [0m[0m    (which expands to)  org.scalajs.dom.raw.MessageEvent => Unit[0m
+[0m[[0m[31merror[0m] [0m[0m required: Function1[org.scalajs.dom.raw.Event,_]       (in scala.scalajs.js) [0m
+[0m[[0m[31merror[0m] [0m[0m        socket.onopen = (event: dom.MessageEvent) => println("Opened socket?")[0m
+[0m[[0m[31merror[0m] [0m[0m                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[31merror[0m] [0m[0m(client / Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@28ba659f, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@392f1048, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m4 deprecations (since 2.13.0); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[0minfo[0m] [0m[0mFast optimizing /users/bmalik/github/webapps/webapps-s21-play-messageboard/client/target/scala-2.13/play-client-fastopt[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 14 -- invalidated: 4 -- trees read: 3[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@1c59fa0f, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:play-server[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 18 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@39e13c20, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@e92dd08, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 2 Scala sources to /users/bmalik/github/webapps/webapps-s21-play-messageboard/server/target/scala-2.13/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 18 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@2e83abfb, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:play-server[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 18 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@7809e391, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 23094 s (06:24:54), completed May 4, 2021, 9:47:17 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

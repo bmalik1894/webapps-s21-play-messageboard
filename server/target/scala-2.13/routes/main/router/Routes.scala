@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/conf/routes
-// @DATE:Tue Apr 27 10:19:37 CDT 2021
+// @DATE:Tue May 04 08:38:43 CDT 2021
 
 package router
 
@@ -22,7 +22,9 @@ class Routes(
   // @LINE:30
   Messageboarddb_2: controllers.Messageboarddb,
   // @LINE:42
-  Assets_4: controllers.Assets,
+  DrawSocket_4: controllers.DrawSocket,
+  // @LINE:46
+  Assets_5: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
 
@@ -37,13 +39,15 @@ class Routes(
     // @LINE:30
     Messageboarddb_2: controllers.Messageboarddb,
     // @LINE:42
-    Assets_4: controllers.Assets
-  ) = this(errorHandler, Application_3, WebSocket_0, Messageboard_1, Messageboarddb_2, Assets_4, "/")
+    DrawSocket_4: controllers.DrawSocket,
+    // @LINE:46
+    Assets_5: controllers.Assets
+  ) = this(errorHandler, Application_3, WebSocket_0, Messageboard_1, Messageboarddb_2, DrawSocket_4, Assets_5, "/")
 
   def withPrefix(addPrefix: String): Routes = {
     val prefix = play.api.routing.Router.concatPrefix(addPrefix, this.prefix)
     router.RoutesPrefix.setPrefix(prefix)
-    new Routes(errorHandler, Application_3, WebSocket_0, Messageboard_1, Messageboarddb_2, Assets_4, prefix)
+    new Routes(errorHandler, Application_3, WebSocket_0, Messageboard_1, Messageboarddb_2, DrawSocket_4, Assets_5, prefix)
   }
 
   private[this] val defaultPrefix: String = {
@@ -77,6 +81,8 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """messageListDB""", """controllers.Messageboarddb.messageList"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """logoutDB""", """controllers.Messageboarddb.logout"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """scalajsCanvas""", """controllers.Application.scalajsCanvas"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """drawSjs""", """controllers.DrawSocket.index"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """drawSocket""", """controllers.DrawSocket.socket"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.at(file:String)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """versionedAssets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     Nil
@@ -555,11 +561,47 @@ class Routes(
   )
 
   // @LINE:42
-  private[this] lazy val controllers_Assets_at26_route = Route("GET",
+  private[this] lazy val controllers_DrawSocket_index26_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("drawSjs")))
+  )
+  private[this] lazy val controllers_DrawSocket_index26_invoker = createInvoker(
+    DrawSocket_4.index,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.DrawSocket",
+      "index",
+      Nil,
+      "GET",
+      this.prefix + """drawSjs""",
+      """ Task 11 Routes""",
+      Seq()
+    )
+  )
+
+  // @LINE:43
+  private[this] lazy val controllers_DrawSocket_socket27_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("drawSocket")))
+  )
+  private[this] lazy val controllers_DrawSocket_socket27_invoker = createInvoker(
+    DrawSocket_4.socket,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.DrawSocket",
+      "socket",
+      Nil,
+      "GET",
+      this.prefix + """drawSocket""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:46
+  private[this] lazy val controllers_Assets_at28_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_at26_invoker = createInvoker(
-    Assets_4.at(fakeValue[String]),
+  private[this] lazy val controllers_Assets_at28_invoker = createInvoker(
+    Assets_5.at(fakeValue[String]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.Assets",
@@ -572,12 +614,12 @@ class Routes(
     )
   )
 
-  // @LINE:43
-  private[this] lazy val controllers_Assets_versioned27_route = Route("GET",
+  // @LINE:47
+  private[this] lazy val controllers_Assets_versioned29_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("versionedAssets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_versioned27_invoker = createInvoker(
-    Assets_4.versioned(fakeValue[String], fakeValue[Asset]),
+  private[this] lazy val controllers_Assets_versioned29_invoker = createInvoker(
+    Assets_5.versioned(fakeValue[String], fakeValue[Asset]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.Assets",
@@ -750,15 +792,27 @@ class Routes(
       }
   
     // @LINE:42
-    case controllers_Assets_at26_route(params@_) =>
-      call(params.fromPath[String]("file", None)) { (file) =>
-        controllers_Assets_at26_invoker.call(Assets_4.at(file))
+    case controllers_DrawSocket_index26_route(params@_) =>
+      call { 
+        controllers_DrawSocket_index26_invoker.call(DrawSocket_4.index)
       }
   
     // @LINE:43
-    case controllers_Assets_versioned27_route(params@_) =>
+    case controllers_DrawSocket_socket27_route(params@_) =>
+      call { 
+        controllers_DrawSocket_socket27_invoker.call(DrawSocket_4.socket)
+      }
+  
+    // @LINE:46
+    case controllers_Assets_at28_route(params@_) =>
+      call(params.fromPath[String]("file", None)) { (file) =>
+        controllers_Assets_at28_invoker.call(Assets_5.at(file))
+      }
+  
+    // @LINE:47
+    case controllers_Assets_versioned29_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
-        controllers_Assets_versioned27_invoker.call(Assets_4.versioned(path, file))
+        controllers_Assets_versioned29_invoker.call(Assets_5.versioned(path, file))
       }
   }
 }

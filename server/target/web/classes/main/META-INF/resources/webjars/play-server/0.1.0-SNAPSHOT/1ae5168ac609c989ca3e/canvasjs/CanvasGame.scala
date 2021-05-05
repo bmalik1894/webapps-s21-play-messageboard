@@ -12,13 +12,24 @@ import org.scalajs.dom.html
 import slinky.web.html._
 import scala.util.Random
 import scala.tools.nsc.doc.html.HtmlTags
+import edu.trinity.videoquizreact.shared.{Line, Point}
 
 object CanvasGame {
 
-  case class Point(var x:Double, var y:Double)
+
 
   val rand = new Random
 
+  // TASK 11 GLOBAL VARIABLES
+  var initMousePos = Point(0, 0)
+  var endMousePos = Point(0, 0)
+  var currColor = "black"
+
+  val colorpicker = dom.document.getElementById("colorpicker").asInstanceOf[html.Input]
+  val sizepicker = dom.document.getElementById("sizepicker").asInstanceOf[html.Input]
+
+
+  // TASK 10 GLOBAL VARIABLES
   var playing = false
   var points = 0
   var timeRemaining = 60
@@ -26,15 +37,18 @@ object CanvasGame {
   var pellets = Seq[Point]()
   val playerLoc = Point(235, 235)    
 
-
   val canvas = dom.document.getElementById("scalajs-canvas").asInstanceOf[html.Canvas]
   val context = canvas.getContext("2d").asInstanceOf[dom.CanvasRenderingContext2D]
   val scoreBoard = document.getElementById("points")
   val clock = document.getElementById("timer")
-  
+
+
 
   def main(args: Array[String]): Unit = {
-    if (dom.document.getElementById("scalajs-canvas") != null) {
+
+
+    ///////////////////// TASK 10 ///////////////////////////
+    if (dom.document.getElementById("scalajs-canvas") != null && dom.document.getElementById("scalajs-draw") == null) {
       // setup
       context.fillStyle = "white"
       context.fillRect(0, 0, 500, 500)
@@ -82,8 +96,119 @@ object CanvasGame {
       dom.document.onkeypress = (event:dom.KeyboardEvent) => updateCanvas(event)
       
       }
+    ///////////////////// TASK 11 ///////////////////////////
+      else if (dom.document.getElementById("scalajs-draw") != null) {
+
+        val drawvas = dom.document.getElementById("scalajs-draw").asInstanceOf[html.Canvas]
+        val drawtext = drawvas.getContext("2d").asInstanceOf[dom.CanvasRenderingContext2D]
+        
+        val socketRoute = dom.document.getElementById("ws-route").asInstanceOf[html.Input].value.replace("http", "ws")
+        val socket = new dom.WebSocket(socketRoute)
+
+        drawtext.fillStyle = "white"
+        drawtext.fillRect(0,0,500,500)
+        socket.onopen = (event:dom.Event) => socket.send("I'm new!")
+        socket.onmessage = (event:dom.MessageEvent) => updateDrawvas(event, drawtext)
+        var down = false
+
+        // Mouse event functions
+        dom.document.onmousedown = (event: dom.MouseEvent) => {
+          getMousePosition(event, drawvas)
+          down = true
+        }
+        dom.document.onmouseup = (event:dom.MouseEvent) => {
+          down = false
+          if (initMousePos.x < 500 && initMousePos.x > 0 && initMousePos.y > 0 && initMousePos.y < 500)
+            sendLine(event, drawvas, socket)
+        
+        }
+        dom.document.onmousemove = (event: dom.MouseEvent) => {
+          if(down && initMousePos.x < 500 && initMousePos.x > 0 && initMousePos.y > 0 && initMousePos.y < 500) 
+              previewLine(event, drawtext, drawvas)
+        }
+        
+        currColor = colorpicker.value
+        colorpicker.onchange = (e) => {
+          currColor = colorpicker.value
+          println(currColor)
+          }
+      }
     }
   
+  ///////////////////// TASK 11 ///////////////////////////
+  def getMousePosition(event:dom.MouseEvent, drawvas:html.Canvas) = {
+    val xpos = (event.clientX - drawvas.getBoundingClientRect().left).toInt
+    val ypos = (event.clientY - drawvas.getBoundingClientRect().top).toInt
+    println("Mouse position: (" + xpos + ", " + ypos + ")")
+    initMousePos = Point(xpos, ypos)
+  }
+
+  def sendLine(event:dom.MouseEvent, drawvas:html.Canvas, socket:dom.WebSocket) = {
+    val xpos = (event.clientX - drawvas.getBoundingClientRect().left).toInt
+    val ypos = (event.clientY - drawvas.getBoundingClientRect().top).toInt
+    println("Mouse position: (" + xpos + ", " + ypos + ")")
+    println("Line length: " + math.sqrt(math.pow(xpos, 2) + math.pow(ypos, 2)))
+    endMousePos = Point(xpos, ypos)
+
+    val linecsv = initMousePos.x.toString() + "," + initMousePos.y.toString() + "," + xpos.toString() + "," + ypos.toString() + "," + currColor + "," + sizepicker.value
+    socket.send(linecsv)
+  }
+
+  def updateDrawvas(event:dom.MessageEvent, drawvas:dom.CanvasRenderingContext2D) = {
+    val data = event.data.toString()
+    drawvas.fillStyle = "white"
+    drawvas.fillRect(0, 0, 500, 500)    
+    println(data)
+  
+    if (data.indexOf(';') != -1) {
+      
+      val lines = data.split(";")
+      for (line <- lines) {
+        val linedata = line.split(",")
+      
+        drawvas.beginPath()
+        drawvas.strokeStyle = linedata(4)
+        drawvas.lineWidth = linedata(5).toDouble
+
+        println(linedata.mkString)
+        drawvas.moveTo(linedata(0).toDouble, linedata(1).toDouble)
+        drawvas.lineTo(linedata(2).toDouble, linedata(3).toDouble)
+      
+        drawvas.stroke()
+      }
+      
+    } else if (data.indexOf(',') != -1) {
+      val linedata = data.split(",")
+      
+      drawvas.beginPath()
+      drawvas.strokeStyle = linedata(4)
+      drawvas.lineWidth = linedata(5).toDouble
+            
+      drawvas.moveTo(linedata(0).toDouble, linedata(1).toDouble)
+      drawvas.lineTo(linedata(2).toDouble, linedata(3).toDouble)
+
+      drawvas.stroke()
+    }
+
+  }
+
+  def previewLine(event:dom.MouseEvent, drawvas:dom.CanvasRenderingContext2D, canvas:html.Canvas) = {
+    drawvas.fillStyle = "white"
+    drawvas.fillRect(0, 0, 500, 500)
+    
+    drawvas.beginPath()
+    drawvas.strokeStyle = colorpicker.value
+    drawvas.lineWidth = sizepicker.value.toInt
+
+    drawvas.moveTo(initMousePos.x, initMousePos.y)
+    drawvas.lineTo((event.clientX - canvas.getBoundingClientRect().left).toInt, 
+        (event.clientY - canvas.getBoundingClientRect().top).toInt)
+
+    drawvas.stroke()
+
+  }
+
+  ///////////////////// TASK 10 ///////////////////////////
   @JSExportTopLevel("initializeGame")
   def initializeGame(): Unit = {
     println("Starting Game")

@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/users/bmalik/github/webapps/webapps-s21-play-messageboard/server/conf/routes
-// @DATE:Tue Apr 27 10:19:37 CDT 2021
+// @DATE:Tue May 04 08:38:43 CDT 2021
 
 
 package router {
