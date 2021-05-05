@@ -989,8 +989,9 @@ $c_Lcanvasjs_CanvasGame$.prototype.main__AT__V = (function(args) {
   } else if (($m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().getElementById("scalajs-draw") !== null)) {
     var drawvas = $m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().getElementById("scalajs-draw");
     var drawtext = drawvas.getContext("2d");
-    var this$3 = $as_T($m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().getElementById("ws-route").value);
-    var socketRoute = $as_T(this$3.split("http").join("ws"));
+    var socketRoute = $as_T($m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().getElementById("ws-route").value);
+    var this$3 = socketRoute;
+    socketRoute = $as_T(this$3.split("http").join("wss"));
     var socket = new WebSocket(socketRoute);
     drawtext.fillStyle = "white";
     drawtext.fillRect(0.0, 0.0, 500.0, 500.0);

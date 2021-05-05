@@ -102,7 +102,13 @@ object CanvasGame {
         val drawvas = dom.document.getElementById("scalajs-draw").asInstanceOf[html.Canvas]
         val drawtext = drawvas.getContext("2d").asInstanceOf[dom.CanvasRenderingContext2D]
         
-        val socketRoute = dom.document.getElementById("ws-route").asInstanceOf[html.Input].value.replace("http", "ws")
+        var socketRoute = dom.document.getElementById("ws-route").asInstanceOf[html.Input].value
+        //if(socketRoute.indexOf("https:") == -1) {
+        //  socketRoute = socketRoute.replace("http", "ws")
+        //}  else {
+          socketRoute = socketRoute.replace("http", "wss")
+        //}
+
         val socket = new dom.WebSocket(socketRoute)
 
         drawtext.fillStyle = "white"
